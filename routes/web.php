@@ -11,7 +11,8 @@
 |
 */
 
-Route::get('/', 'HomeController@execute')->name('home');
+Route::get('/', 'MainController@index')
+    ->name('main.page');
 
 Route::get('/news/{id1}/{id}','NewsController@execute')->name('news');
 

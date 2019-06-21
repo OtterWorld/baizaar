@@ -44,25 +44,26 @@ class LayoutComposer
     public function compose(View $view)
     {
         $nodes = NestedCategory::get()->toTree();
-        // dd($nodes);
+        
         $categories = $this->category
             ->join('subcategories', 'subcategories.category_id','=','categories.id')
             ->get();
-        // dd($categories);
-        $subCategories = $this->subCategory
+        
+            $subCategories = $this->subCategory
             ->get();
 
         $shops = $this->shop
             ->get();
-        $shops_category_id = $shops->pluck('category_id')->toArray();
+        
+            $shops_category_id = $shops->pluck('category_id')->toArray();
 
         $partners = $this->partner
             ->get();
         
-        $contact = $this->contact
+            $contact = $this->contact
             ->first();
-
-        $sec_cat = $this->secondaryCategory
+        
+            $sec_cat = $this->secondaryCategory
             ->get();
         $view->with(['shops_category_id' => $shops_category_id, 'subCategories' => $subCategories, 'categories' => $categories, 'sec_cat' => $sec_cat, 'nodes' => $nodes, 'shops' => $shops, 'contact' => $contact]);
     }
