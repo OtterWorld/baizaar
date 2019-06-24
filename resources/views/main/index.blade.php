@@ -16,205 +16,48 @@
         <li class="owl-dot" role="button"></li>
     </ul>
     <!-- dots end -->
-
     <div class="main-banner__owl owl-carousel owl-theme">
-
+        @foreach ($sliders as $slider)
         <!-- slide 1 -->
-        <div class="main-banner__slide" style="background-image: url('images/banner.jpg');">
+        <div class="main-banner__slide" style="background-image: url({{ asset('storage/'.$slider->image) }});">
 
-        <div class="container">
-
-            <div class="row">
-
-            <div class="col-lg-4 col-md-4 col-sm-12 wow fadeInLeft">
-                <div class="logo-flag">
-                <img src="images/baizaar-flag.png" alt="baizaar">
+            <div class="container">
+    
+                <div class="row">
+    
+                <div class="col-lg-4 col-md-4 col-sm-12 wow fadeInLeft">
+                    <div class="logo-flag">
+                    <img src="images/baizaar-flag.png" alt="baizaar">
+                    </div>
+    
+                    <div class="banner__items">
+                    <h3>{{ $slider->title }}</h3>
+                    <a href="{{ $slider->url }}" class="banner__btn {{ $slider->button_position }}">
+                        Подробнее...
+                        <span class="button__stroke"></span>
+                        <span class="button-underline__horizontal"></span>
+                        <span class="button-underline__vertical"></span>
+                    </a>
+                    </div>
+    
                 </div>
-
-                <div class="banner__items">
-                <h3>Ваш специалист по разному шопингу</h3>
-                <a href="#" class="banner__btn">
-                    Подробнее...
-                    <span class="button__stroke"></span>
-                    <span class="button-underline__horizontal"></span>
-                    <span class="button-underline__vertical"></span>
-                </a>
+    
+                <div class="offset-lg-4 offset-md-4 offset-sm-4"></div>
+    
+                <div class="col-lg-4 col-md-4 col-sm-4 wow fadeInRight">
+                    <div class="banner-utp">
+                    <h3>{{ $slider->second_title }}</h3>
+                    </div>
                 </div>
-
-            </div>
-
-            <div class="offset-lg-4 offset-md-4 offset-sm-4"></div>
-
-            <div class="col-lg-4 col-md-4 col-sm-4 wow fadeInRight">
-                <div class="banner-utp">
-                <h3>Самый <span class="black-bold">современный Развлекательный центр</span> города Атырау</h3>
+    
                 </div>
+    
             </div>
-
+    
             </div>
-
-        </div>
-
-        </div>
-        <!-- slide 1 -->
-
-
-        <!-- slide 2 -->
-        <div class="main-banner__slide" style="background-image: url('images/banner.jpg');">
-
-        <div class="container">
-
-            <div class="row">
-
-            <div class="col-lg-4 col-md-4 col-sm-12">
-                <div class="logo-flag">
-                <img src="images/baizaar-flag.png" alt="baizaar">
-                </div>
-
-                <div class="banner__items">
-                <h3>Ваш специалист по разному шопингу</h3>
-                <a href="#" class="banner__btn">
-                    Подробнее...
-                    <span class="button__stroke"></span>
-                    <span class="button-underline__horizontal"></span>
-                    <span class="button-underline__vertical"></span>
-                </a>
-                </div>
-
-            </div>
-
-            <div class="offset-lg-4 offset-md-4 offset-sm-4"></div>
-
-            <div class="col-lg-4 col-md-4 col-sm-4">
-                <div class="banner-utp">
-                <h3>Самый <span class="black-bold">современный Развлекательный центр</span> города Атырау</h3>
-                </div>
-            </div>
-
-            </div>
-
-        </div>
-
-        </div>
-        <!-- slide 2 -->
-
-        <!-- slide 3 -->
-        <div class="main-banner__slide" style="background-image: url('images/banner.jpg');">
-
-        <div class="container">
-
-            <div class="row">
-
-            <div class="col-lg-4 col-md-4 col-sm-12">
-                <div class="logo-flag">
-                <img src="images/baizaar-flag.png" alt="baizaar">
-                </div>
-
-                <div class="banner__items">
-                <h3>Ваш специалист по разному шопингу</h3>
-                <a href="#" class="banner__btn">
-                    Подробнее...
-                    <span class="button__stroke"></span>
-                    <span class="button-underline__horizontal"></span>
-                    <span class="button-underline__vertical"></span>
-                </a>
-                </div>
-
-            </div>
-
-            <div class="offset-lg-4 offset-md-4 offset-sm-4"></div>
-
-            <div class="col-lg-4 col-md-4 col-sm-4">
-                <div class="banner-utp">
-                <h3>Самый <span class="black-bold">современный Развлекательный центр</span> города Атырау</h3>
-                </div>
-            </div>
-
-            </div>
-
-        </div>
-
-        </div>
-        <!-- slide 3 -->
-
-        <!-- slide 4 -->
-        <div class="main-banner__slide" style="background-image: url('images/banner.jpg');">
-
-        <div class="container">
-
-            <div class="row">
-
-            <div class="col-lg-4 col-md-4 col-sm-12">
-                <div class="logo-flag">
-                <img src="images/baizaar-flag.png" alt="baizaar">
-                </div>
-
-                <div class="banner__items">
-                <h3>Ваш специалист по разному шопингу</h3>
-                <a href="#" class="banner__btn">
-                    Подробнее...
-                    <span class="button__stroke"></span>
-                    <span class="button-underline__horizontal"></span>
-                    <span class="button-underline__vertical"></span>
-                </a>
-                </div>
-
-            </div>
-
-            <div class="offset-lg-4 offset-md-4 offset-sm-4"></div>
-
-            <div class="col-lg-4 col-md-4 col-sm-4">
-                <div class="banner-utp">
-                <h3>Самый <span class="black-bold">современный Развлекательный центр</span> города Атырау</h3>
-                </div>
-            </div>
-
-            </div>
-
-        </div>
-
-        </div>
-        <!-- slide 4 -->
-
-        <!-- slide 5 -->
-        <div class="main-banner__slide" style="background-image: url('images/banner.jpg');">
-
-        <div class="container">
-
-            <div class="row">
-
-            <div class="col-lg-4 col-md-4 col-sm-12">
-                <div class="logo-flag">
-                <img src="images/baizaar-flag.png" alt="baizaar">
-                </div>
-
-                <div class="banner__items">
-                <h3>Ваш специалист по разному шопингу</h3>
-                <a href="#" class="banner__btn">
-                    Подробнее...
-                    <span class="button__stroke"></span>
-                    <span class="button-underline__horizontal"></span>
-                    <span class="button-underline__vertical"></span>
-                </a>
-                </div>
-
-            </div>
-
-            <div class="offset-lg-4 offset-md-4 offset-sm-4"></div>
-
-            <div class="col-lg-4 col-md-4 col-sm-4">
-                <div class="banner-utp">
-                <h3>Самый <span class="black-bold">современный Развлекательный центр</span> города Атырау</h3>
-                </div>
-            </div>
-
-            </div>
-
-        </div>
-
-        </div>
-        <!-- slide 5 -->
-
+            <!-- slide 1 -->
+    
+        @endforeach
     </div>
 
     <!-- arrow right -->
@@ -779,78 +622,25 @@
 
         <div class="developments-slide owl-carousel owl-theme">
 
-            <!-- development slide 1 -->
+            @foreach ($news as $newsItem)
+            <!-- development slide {{ $loop->iteration }} -->
             <div class="developments-slide__item">
 
-            <div class="developments-slide__top" style="background-image: url('images/developments-1.jpg');">
-                <div class="developments-percent">
-                Мар <span class="percent__item">15</span>
+                <div class="developments-slide__top" style="background-image: url('images/developments-1.jpg');">
+                    <div class="developments-percent">
+                    {{ $newsItem->month }} <span class="percent__item">{{ $newsItem->day }}</span>
+                    </div>
                 </div>
-            </div>
 
-            <div class="developments-slide__bottom hvr-shutter-out-horizontal">
-                <p class="developments-slide__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard </p>
+                <div class="developments-slide__bottom hvr-shutter-out-horizontal">
+                    <p class="developments-slide__text">{{ $newsItem->description }}</p>
 
-                <a href="#" class="developments-slide__btn">Подробнее...</a>
-            </div>
-
-            </div>
-            <!-- development slide 1 end -->
-
-            <!-- development slide 2 -->
-            <div class="developments-slide__item">
-
-            <div class="developments-slide__top" style="background-image: url('images/developments-2.jpg');">
-                <div class="developments-percent">
-                Апр <span class="percent__item">01</span>
+                    <a href="#" class="developments-slide__btn">Подробнее...</a>
                 </div>
-            </div>
-
-            <div class="developments-slide__bottom hvr-shutter-out-horizontal">
-                <p class="developments-slide__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard </p>
-
-                <a href="#" class="developments-slide__btn">Подробнее...</a>
-            </div>
 
             </div>
-            <!-- development slide 2 end -->
-
-            <!-- development slide 3 -->
-            <div class="developments-slide__item">
-
-            <div class="developments-slide__top" style="background-image: url('images/developments-3.jpg');">
-                <div class="developments-percent">
-                Фев <span class="percent__item">30</span>
-                </div>
-            </div>
-
-            <div class="developments-slide__bottom hvr-shutter-out-horizontal">
-                <p class="developments-slide__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard </p>
-
-                <a href="#" class="developments-slide__btn">Подробнее...</a>
-            </div>
-
-            </div>
-            <!-- development slide 3 end -->
-
-            <!-- development slide 4 -->
-            <div class="developments-slide__item">
-
-            <div class="developments-slide__top" style="background-image: url('images/developments-4.jpg');">
-                <div class="developments-percent">
-                Май <span class="percent__item">17</span>
-                </div>
-            </div>
-
-            <div class="developments-slide__bottom hvr-shutter-out-horizontal">
-                <p class="developments-slide__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard </p>
-
-                <a href="#" class="developments-slide__btn">Подробнее...</a>
-            </div>
-
-            </div>
-            <!-- development slide 4 end -->
-
+            <!-- development slide {{ $loop->iteration }} end -->
+            @endforeach
         </div>
 
         <!-- arrow right -->
@@ -868,36 +658,35 @@
 
     <section class="about-baizar">
 
-    <div class="about-baizar__wrap" style="background-image: url(images/about-bg.jpg)">
-
-        <a href="#" class="about-arrows about-arrow__left wow fadeInLeft"></a>
-        
-        <div class="container">
-
-        <div class="about-baizar__content owl-carousel owl-theme wow fadeInUp">
-
-            <!-- slide 1 -->
-            <div class="about-slide__item">
-            <a href="#" class="about-baizar__btn hvr-rectangle-out">О торгово-развлекательном центре <span class="def-bold">Baizar</span></a>
+        <div class="about-baizar__wrap">
+    
+          <a href="#" class="about-arrows about-arrow__left wow fadeInLeft"></a>
+          
+          <div class="container-fluid" style="padding: 0;">
+    
+            <div class="about-baizar__content owl-carousel owl-theme wow fadeInUp">
+    
+              <!-- slide 1 -->
+              <div class="about-slide__item">
+                <a href="#" class="about-baizar__btn hvr-rectangle-out">О торгово-развлекательном центре <span class="def-bold">Baizar</span></a>
+              </div>
+              <!-- slide 1 end -->
+    
+              <!-- slide 1 -->
+              <div class="about-slide__item">
+                <a href="#" class="about-baizar__btn hvr-rectangle-out">О торгово-развлекательном центре <span class="def-bold">Baizar</span></a>
+              </div>
+              <!-- slide 1 end -->
+    
             </div>
-            <!-- slide 1 end -->
-
-            <!-- slide 1 -->
-            <div class="about-slide__item">
-            <a href="#" class="about-baizar__btn hvr-rectangle-out">О торгово-развлекательном центре <span class="def-bold">Baizar</span></a>
-            </div>
-            <!-- slide 1 end -->
-
+    
+          </div>
+    
+          <a href="#" class="about-arrows about-arrow__right wow fadeInRight"></a>
+    
         </div>
-
-        </div>
-
-        <a href="#" class="about-arrows about-arrow__right wow fadeInRight"></a>
-
-    </div>
-
+    
     </section>
-
 
     <section class="subscribe">
 

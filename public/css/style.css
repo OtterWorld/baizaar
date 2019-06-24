@@ -1,3 +1,4 @@
+
 @font-face {
   font-family: 'montserrat-regular';
   src: url("../fonts/montserrat/Montserrat-Regular.ttf"); }
@@ -63,7 +64,7 @@
   transition: 0.1s ease;
   background-image: url("../images/small-arrow.png");
   background-repeat: no-repeat;
-  background-position: 90% center;
+  background-position: 95% center;
   z-index: 9;
   position: relative; }
   .def-btn:hover {
@@ -460,13 +461,19 @@
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
-            justify-content: space-between; }
+            justify-content: space-between; 
+            padding-top:1rem;}
   .open-menu__wrap .open-menu__right .right-contacts {
-  overflow:auto; }
+  overflow:auto;
+   }
+   .open-menu__wrap .open-menu__right{
+    margin-left: 2rem;
+   }
     .open-menu__wrap .open-menu__right .right-contacts .right-contacts__title {
       font-family: "montserrat-bold", sans-serif;
       font-size: 14px;
-      color: #66c428;}
+      color: #66c428;
+      padding-top: 1rem;}
     .open-menu__wrap .open-menu__right .right-contacts p {
       font-size: 10px;
       font-family: "montserrat-regular", sans-serif;}
@@ -481,7 +488,7 @@
       margin-top: 5px;}
     .open-menu__wrap .open-menu__list li {
       list-style-type: none;
-      line-height: 11px; }
+      line-height: 20px; }
       .open-menu__wrap .open-menu__list li:after {
         display: none !important; }
       .open-menu__wrap .open-menu__list li a {
@@ -1027,6 +1034,7 @@
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: 36px;
+  margin-bottom: 3rem;
 }
 
 .prev, .next{
@@ -1045,7 +1053,7 @@
 }
 .owl-carousel{
   position: relative;
-  top: 50px;
+/*  top: 50px;*/
   margin: 0 auto;
 }
 #sync2 .item {
@@ -1666,7 +1674,22 @@
   .main-banner .banner__items {
     margin-top: 40px;
     margin-left: 50px; }
-    .main-banner .banner__items .banner__btn {
+
+/* расположение кнопки на главном баннере */
+
+.main-banner .banner__items .banner__btn-left{
+position: absolute;
+left: 50rem;}
+.main-banner .banner__items .banner__btn-right{
+	position: absolute !important;
+	top: 0;
+}
+.main-banner .banner__items .banner__btn-bottom{
+	position: absolute !important;
+	left: 50rem;
+	bottom: 15rem;
+}
+ .main-banner .banner__items .banner__btn {
       display: block;
       color: #000;
       font-family: "montserrat-bold", sans-serif;
@@ -2084,10 +2107,10 @@
     position: absolute;
     right: 22px;
     top: 22px;
-    background-color: #ff8603;
+    /* background-color: #ff8603; */
     width: 80px;
     height: 80px;
-    color: #fff;
+    /* color: #fff; */
     font-family: "montserrat-bold", sans-serif;
     font-size: 13px;
     text-transform: uppercase;
@@ -2147,7 +2170,9 @@
       }
 
     /*discounts arrow*/
-
+    .discounts{
+      position: relative;
+    }
         .discounts .discount-arrow {
     background-color: #fff;
     border: 1px solid #000;
@@ -2160,7 +2185,8 @@
     background-position: center center;
     z-index: 9;
     position: absolute;
-    top: 190%;}
+    top: 20rem;
+}
     .discounts .discount-arrow:hover {
       background-color: #66c428; }
   .discounts .dicsount-arrow__left {
@@ -2179,14 +2205,14 @@
             @media only screen and (max-width: 576px){
         .discounts .discount-arrow{
           position: absolute !important;
-          top: 200% !important;
+          top: 70rem !important;
         } 
       }
 
 /* promoutions and discounts end */
 /* developments */
 .developments {
-  margin-top: 60px; }
+  margin-top: 10rem; }
   .developments .developments__text {
     margin-top: 38px; }
     .developments .developments__text p {
@@ -2306,6 +2332,11 @@
       border: none; }
   .developments .instagram__btn {
     margin-top: 70px; }
+    @media only screen and (max-width: 576px){
+      .developments .development-arrow{
+        
+      }
+    }
 
 /* developments end */
 /* about baizar */
@@ -2320,7 +2351,7 @@
             background-size: cover;
     position: relative;
     height: 570px; }
-    .about-baizar .about-baizar__wrap:before {
+/*    .about-baizar .about-baizar__wrap:before {
       content: '';
       background-color: rgba(0, 0, 0, 0.5);
       position: absolute;
@@ -2328,17 +2359,22 @@
       top: 0;
       left: 0;
       width: 100%;
-      height: 100%; }
+      height: 100%; }*/
   .about-baizar .about-baizar__content {
     z-index: 1;
     position: relative;
     height: 100%; }
     .about-baizar .about-baizar__content .about-slide__item {
-      height: 100%;
-      padding: 20% 0; }
+      height: 570px;
+      background-image: url(../images/about-bg.jpg);
+      background-repeat: no-repeat;
+      background-position:center; 
+      width:100%;
+      background-size: cover;}
     .about-baizar .about-baizar__content .about-baizar__btn {
       display: block;
       position: relative;
+      top: 13rem;
       font-family: "montserrat-regular", sans-serif;
       font-size: 20px;
       color: #fff;
@@ -2352,7 +2388,7 @@
       -webkit-transition: color 1s ease;
       -o-transition: color 1s ease;
       transition: color 1s ease; }
-      .about-baizar .about-baizar__content .about-baizar__btn:after {
+      /*.about-baizar .about-baizar__content .about-baizar__btn:after {
         content: '';
         background-color: transparent;
         position: absolute;
@@ -2368,13 +2404,13 @@
         -webkit-transition: 0.8s ease;
         -o-transition: 0.8s ease;
         transition: 0.8s ease;
-        opacity: .5; }
+        opacity: .5; }*/
       .about-baizar .about-baizar__content .about-baizar__btn:hover {
         color: #000; }
-        .about-baizar .about-baizar__content .about-baizar__btn:hover:after {
+        /*.about-baizar .about-baizar__content .about-baizar__btn:hover:after {
           border: 1px solid #fff;
           height: 130%;
-          width: 110%; }
+          width: 110%; }*/
       .about-baizar .about-baizar__content .about-baizar__btn .def-bold {
         text-transform: uppercase; }
   .about-baizar .about-arrows {
@@ -2625,9 +2661,9 @@
       -webkit-transform: translate(-50%, -50%);
           -ms-transform: translate(-50%, -50%);
               transform: translate(-50%, -50%); }
-    .footer .footer__social a:hover {
+/*    .footer .footer__social a:hover {
       -webkit-box-shadow: 0.707px 0.707px 15.48px 2.52px rgba(102, 196, 40, 0.59);
-              box-shadow: 0.707px 0.707px 15.48px 2.52px rgba(102, 196, 40, 0.59); }
+              box-shadow: 0.707px 0.707px 15.48px 2.52px rgba(102, 196, 40, 0.59); }*/
       .footer .footer__social a:hover:after {
         border: 1px solid #fff;
         height: 130%;
@@ -2762,9 +2798,9 @@
       display: none; }
     .header .cap .hamburger {
       width: auto; }
-  .developments .development-arrow {
+/*  .developments .development-arrow {
     top: auto;
-    bottom: -5rem; }
+    bottom: -5rem; }*/
   .developments .development-arrow__left {
     left: 0%; }
   .developments .development-arrow__right {
@@ -3968,10 +4004,63 @@
   height: 6px;
   background-color: #66c428;
 }
-.about .about__banner .about-banner__img-one{
-  clip-path: polygon(0% 0%, 90% 5%, 100% 98%, 0% 100%);
-  width: 115%;
+.about .carousel .carousel-item .d-block{
+  display: inline-block !important;
 }
-.about .about__banner .about-banner__img-two{
-  clip-path: polygon(0% 5%, 100% 0%, 100% 100%, 0% 100%);
+.about .carousel .carousel-item img{
+  width: 20rem;
+}
+.about .carousel{
+  width:100%;
+}
+.about .carousel .carousel-item .slide-img1{
+  width:50%;
+  z-index: 9;
+	clip-path: polygon(0% 0%, 85% 10%, 100% 98%, 0% 100%);
+}
+.about .carousel .carousel-item .slide-img2{
+  width: 60%;
+  position: absolute;
+  right: 0;
+  z-index: -999;
+	clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 100%);
+}
+.about .wrapper-carousel{
+  padding-bottom:20rem;
+  position: relative;
+}
+.about .carousel .carousel-control-btn{
+  background-color: #acacac;
+  width: 50px; height: 50px;
+  margin:auto 1rem;
+  opacity: 1;
+}
+.about .carousel .carousel-control-btn:focus{
+  background-color: #66c428;
+}
+.about .slide-text .carousel-item{
+  padding: 4rem;
+}
+.about .slide-text .carousel-item p{
+  font-weight:  400;
+}
+.about .slide-text .carousel-item p span{
+  font-weight:  700;
+}
+.about .carousel-slide-text{
+  background-color: #fff;
+  position: absolute;
+  top: 20rem;
+  left: 10rem;
+}
+.about .slide-text .carousel-control-next,
+.about .slide-text .carousel-control-prev{
+  position: absolute;
+  bottom: -25rem;
+}
+.about .slide-text .carousel-control-prev{
+  left: 35%;
+}
+.about .slide-text .carousel-control-next{
+  right: 35%;
 }

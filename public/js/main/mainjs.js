@@ -393,8 +393,8 @@ $(document).ready(function() {
 
 		var owl = $('.developments-slide');
 		owl.owlCarousel({
-			items: 4,
-			loop: true,
+			items: 1,
+			loop: false,
 			dots: false,
 			nav: false,
 			autoWidth: true,

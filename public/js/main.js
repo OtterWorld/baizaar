@@ -394,7 +394,7 @@ $(document).ready(function() {
 		var owl = $('.developments-slide');
 		owl.owlCarousel({
 			items: 4,
-			loop: true,
+			loop: false,
 			dots: false,
 			nav: false,
 			autoWidth: true,
@@ -451,7 +451,8 @@ $(document).ready(function() {
 		owl.owlCarousel({
 			loop: true,
 			dots: false,
-
+			autoplay: true,
+			autoplayTimeout: 1500,
 			responsive : {
 				992 : {
 					items: 6

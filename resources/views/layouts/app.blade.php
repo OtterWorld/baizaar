@@ -18,6 +18,7 @@
 </head>
 
 <body>
+  <section id="up"></section>
   <!-- start particles -->
   <figure id="particles-js"></figure>
   <!-- end particles -->
@@ -107,6 +108,7 @@
               </ul>
             @endif
           @endforeach
+          <li><a href="#up" class="smoothscroll">Вверх</a></li>
         </ul>
 
         <div class="mobile-lang">
