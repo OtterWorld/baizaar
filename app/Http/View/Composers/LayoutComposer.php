@@ -55,7 +55,8 @@ class LayoutComposer
         $shops = $this->shop
             ->get();
         
-            $shops_category_id = $shops->pluck('category_id')->toArray();
+        $shops_category_id = $shops
+            ->pluck('category_id')->toArray();
 
         $partners = $this->partner
             ->get();

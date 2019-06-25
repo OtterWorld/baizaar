@@ -600,7 +600,7 @@
         <div class="offset-lg-5"></div>
 
         <div class="col-lg-3 wow fadeInRight">
-            <a href="#" class="development__btn def-btn">Все события</a>
+            <a href="{{ route('news.all.page') }}" class="development__btn def-btn">Все события</a>
         </div>
         </div>
 
@@ -621,12 +621,12 @@
         <!-- arrow left end -->
 
         <div class="developments-slide owl-carousel owl-theme">
-
+            
             @foreach ($news as $newsItem)
             <!-- development slide {{ $loop->iteration }} -->
             <div class="developments-slide__item">
 
-                <div class="developments-slide__top" style="background-image: url('images/developments-1.jpg');">
+                <div class="developments-slide__top" style="background-image: url({{ asset('storage/'.$newsItem->image) }});">
                     <div class="developments-percent">
                     {{ $newsItem->month }} <span class="percent__item">{{ $newsItem->day }}</span>
                     </div>
@@ -635,7 +635,7 @@
                 <div class="developments-slide__bottom hvr-shutter-out-horizontal">
                     <p class="developments-slide__text">{{ $newsItem->description }}</p>
 
-                    <a href="#" class="developments-slide__btn">Подробнее...</a>
+                    <a href="{{ route('news.one.page', $newsItem) }}" class="developments-slide__btn">Подробнее...</a>
                 </div>
 
             </div>
@@ -666,17 +666,13 @@
     
             <div class="about-baizar__content owl-carousel owl-theme wow fadeInUp">
     
-              <!-- slide 1 -->
-              <div class="about-slide__item">
-                <a href="#" class="about-baizar__btn hvr-rectangle-out">О торгово-развлекательном центре <span class="def-bold">Baizar</span></a>
-              </div>
-              <!-- slide 1 end -->
-    
-              <!-- slide 1 -->
-              <div class="about-slide__item">
-                <a href="#" class="about-baizar__btn hvr-rectangle-out">О торгово-развлекательном центре <span class="def-bold">Baizar</span></a>
-              </div>
-              <!-- slide 1 end -->
+              @foreach ($bottomSlider as $slider)
+                <!-- slide 1 -->
+                <div class="about-slide__item" style="background-image: url({{ asset('storage/'.$slider->image) }});">
+                    <a href="#" class="about-baizar__btn hvr-rectangle-out">{{ $slider->title }}</a>
+                </div>
+                <!-- slide 1 end -->              
+              @endforeach
     
             </div>
     
@@ -742,29 +738,11 @@
 
         <div class="partners__owl owl-carousel owl-theme wow fadeInUp">
 
-            <div class="partners__owl__item">
-            <img src="images/partner-1.png" alt="">
-            </div>
-
-            <div class="partners__owl__item">
-            <img src="images/partner-2.png" alt="">
-            </div>
-
-            <div class="partners__owl__item">
-            <img src="images/partner-3.png" alt="">
-            </div>
-
-            <div class="partners__owl__item">
-            <img src="images/partner-4.png" alt="">
-            </div>
-
-            <div class="partners__owl__item">
-            <img src="images/partner-5.png" alt="">
-            </div>
-
-            <div class="partners__owl__item">
-            <img src="images/partner-6.png" alt="">
-            </div>
+            @foreach ($partners as $partner)
+                <div class="partners__owl__item">
+                    <img src="{{ asset('storage/'.$partner->image) }}" alt="">
+                </div>
+            @endforeach
             
         </div>
 

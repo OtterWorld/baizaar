@@ -5,16 +5,16 @@
   <title>@yield('title', 'Baizaar')</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densityDpi=device-dpi" />
 
-  <link rel="stylesheet" href="css/superfish.css">
-  <link rel="stylesheet" href="css/animate.css">
-  <link rel="stylesheet" href="css/aos.css">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/hamburgers.css">
-  <link rel="stylesheet" href="css/hover.css">
-  <link rel="stylesheet" href="css/owl.carousel.min.css">
-  <link rel="stylesheet" href="css/owl.theme.default.min.css">
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/jquery-3.2.1.min.js"></script>
+  <link rel="stylesheet" href="{{ asset('css/superfish.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/animate.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/aos.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/hamburgers.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/hover.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/owl.theme.default.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+  <script src="{{ asset('js/jquery-3.2.1.min.js') }}"></script>
 </head>
 
 <body>
@@ -31,17 +31,16 @@
 
       <div class="search__item" id="search__item">
         <input type="text" placeholder="Введите слово для поиска">
-        <button><img src="images/loupe-white.png" alt="loupe"></button>
+        <button><img src="{{ asset('images/loupe-white.png') }}" alt="loupe"></button>
       </div>
 
     </div>
-
     <!-- hamburger menu -->
     <div class="hamburger-menu" id="hamburger-menu">
-
+      
       <ul class="hamburger-menu__item">
         @foreach ($sec_cat as $category)
-          <li><a href="#">{{ $category->name }}</a></li>
+          <li><a href="{{ url(isset($category->url) ? $category->url : '#') }}">{{ $category->name }}</a></li>
         @endforeach
       </ul>
 
@@ -49,7 +48,7 @@
 
         <div class="hamburger-menu__schedule hamburger-menu__flex">
           <div class="schedule__img hamburger-left__img">
-            <img src="images/menu-clock.svg" alt="">
+            <img src="{{ asset('images/menu-clock.svg') }}" alt="">
           </div>
 
           <div class="schedule__text hamburger-right__text">
@@ -60,7 +59,7 @@
 
         <div class="hamburger-menu__howtoget hamburger-menu__flex">
           <div class="howtoget__img hamburger-left__img">
-            <img src="images/menu-location.svg" alt="">
+            <img src="{{ asset('images/menu-location.svg') }}" alt="">
           </div>
 
           <div class="howtoget__text hamburger-right__text">
@@ -81,11 +80,11 @@
       <nav class="mobile-menu__item">
 
         <a href="#" class="mobile-menu__close">
-          <img src="images/close-button.svg" alt="Закрыть">
+          <img src="{{ asset('images/close-button.svg') }}" alt="Закрыть">
         </a>
 
         <div class="mobile-logo">
-          <a href="#"><img src="images/logo.png" alt="logo"></a>
+          <a href="#"><img src="{{ asset('images/logo.png') }}" alt="logo"></a>
         </div>
 
         <ul class="mobile-menu">
@@ -99,7 +98,7 @@
                       <ul id="subMenu{{ $child->id }}" style="display: none">
                           @foreach ($shops as $shop)
                               @if($shop->category_id == $child->id)
-                                  <li><a href="#">{{ $shop->name }}</a></li>
+                                <li><a href="#">{{ $shop->name }}</a></li>
                               @endif
                           @endforeach
                       </ul>
@@ -127,7 +126,7 @@
         <a href="#" class="mobile-menu__btn" id="mobile-menu__btn">Меню</a>
 
         <div class="logo">
-          <a href="#"><img src="images/logo.png" alt="logo"></a>
+          <a href="#"><img src="{{ asset('images/logo.png') }}" alt="logo"></a>
         </div>
 
         <ul class="menu" id="main-menu">
@@ -179,22 +178,22 @@
                           <div class="open-menu__right open-menu__right__active">
                             <div class="discount-img__wrap">
                               <div class="discount-img__top">
-                                <img src="images/menu-right-img.png" alt="">
+                                <img src="{{ asset('storage/'.$shop->thumbnail) }}" alt="">
                               </div>
         
                               <div class="discount-img__bottom">
-                                <img src="images/menu-right-img1.png" alt="">
-                                <img src="images/menu-right-img2.png" alt="">
-                                <img src="images/menu-right-img3.png" alt="">
+                                @foreach (isset($shop->sales_small) ? json_decode($shop->sales_small) : [] as $sale)
+                                  <img src="{{ asset('storage/'.$sale) }}" alt="">
+                                @endforeach
                               </div>
                             </div>
         
                             <div class="right-contacts">
-                              <h3 class="right-contacts__title">Контакты {{ $shop->id }}</h3>
-                              <p>Магазин <span class="black-bold">O'STIN</span></p>
-                              <p>Часы работы <span class="black-bold">10:00 - 22:00</span></p>
-                              <p>Телефон <span class="black-bold">8 (800) 777-4-999</span></p>
-                              <p>Сайт <span class="black-bold">www.ostin.com</span></p>
+                              <h3 class="right-contacts__title">Контакты</h3>
+                              <p>Магазин <span class="black-bold">{{ $shop->name }}</span></p>
+                              <p>Часы работы <span class="black-bold">{{ $shop->work_time }}</span></p>
+                              <p>Телефон <span class="black-bold">{{ $shop->mobile }}</span></p>
+                              <p>Сайт <span class="black-bold">{{ $shop->site }}</span></p>
                             </div>
                           </div>
         
@@ -210,7 +209,7 @@
         </ul>
 
         <div class="search">
-          <a href="#search__item"><img src="images/loupe.png" alt="Поиск"></a>
+          <a href="#search__item"><img src="{{ asset('images/loupe.png') }}" alt="Поиск"></a>
         </div>
 
         <div class="lang">
@@ -248,7 +247,7 @@
             <div class="col-lg-4 col-md-4">
               <div class="footer__item">
                 <div class="footer__item-img">
-                  <img src="images/footer-location.png" alt="">
+                  <img src="{{ asset('images/footer-location.png') }}" alt="">
                 </div>
                 <p>{{ $contact->address }}</p>
               </div>
@@ -257,7 +256,7 @@
             <div class="col-lg-3 col-md-3">
               <div class="footer__item">
                 <div class="footer__item-img">
-                  <img src="images/footer-clock.png" alt="">
+                  <img src="{{ asset('images/footer-clock.png') }}" alt="">
                 </div>
 
                 <p>График работы ТРЦ с <span class="def-bold">{{ $contact->start }}</span> до <span class="def-bold">{{ $contact->end }}</span>, <span class="def-bold">{{ $contact->weekday }}</span> дней в неделю</p>
@@ -270,8 +269,8 @@
 
             <div class="col-lg-3 col-md-3">
               <div class="footer__social">
-                <a href="#"><img src="images/footer-facebook.png" alt=""></a>
-                <a href="#"><img src="images/footer-instagram.png" alt=""></a>
+                <a href="#"><img src="{{ asset('images/footer-facebook.png') }}" alt=""></a>
+                <a href="#"><img src="{{ asset('images/footer-instagram.png') }}" alt=""></a>
               </div>
             </div>
 
@@ -327,14 +326,14 @@
 
   </footer>
   
-  <script src="js/superfish.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/particles.js"></script>
-  <script src="js/wow.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.mousewheel.min.js"></script>
-  <script src="js/main.js"></script>
+  <script src="{{ asset('js/superfish.min.js') }}"></script>
+  <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+  <script src="{{ asset('js/aos.js')}}"></script>
+  <script src="{{ asset('js/particles.js') }}"></script>
+  <script src="{{ asset('js/wow.min.js') }}"></script>
+  <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+  <script src="{{ asset('js/jquery.mousewheel.min.js') }}"></script>
+  <script src="{{ asset('js/main.js') }}"></script>
 
 </body>
 

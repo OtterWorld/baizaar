@@ -11,13 +11,22 @@
 |
 */
 
+// Main page
 Route::get('/', 'MainController@index')
     ->name('main.page');
 
+// Schedule page
+Route::get('/schedule', 'ScheduleController@index')
+    ->name('schedule.page');
+
+Route::resource('/news', 'NewsController')
+    ->except(['create','store','update', 'destroy'])
+    ->names([
+        'index' => 'news.all.page',
+        'show' => 'news.one.page'
+    ]);
 Route::get('/news/{id1}/{id}','NewsController@execute')->name('news');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
-
-Route::get('test', 'TestController@index');
