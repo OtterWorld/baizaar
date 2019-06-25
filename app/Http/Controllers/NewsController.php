@@ -15,6 +15,7 @@ class NewsController extends Controller
 	}
 
 	public function show(News $news) {
+		
 		switch($news->news_type_id) {
 			case 1: 
 				$view = 'slider';
@@ -29,6 +30,15 @@ class NewsController extends Controller
 				$view = 'text';
 		}
 
-		return view('news.show-'.$view, compact('news'));
+		$previous = News::find(
+			News::where('id', '<', $news->id)
+				->max('id')
+		);
+
+		$next = News::find(
+			News::where('id', '>', $news->id)
+				->min('id')
+		);
+		return view('news.show-'.$view, compact('news', 'previous', 'next'));
 	}
 }

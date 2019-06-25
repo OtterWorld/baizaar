@@ -84,7 +84,7 @@
         </a>
 
         <div class="mobile-logo">
-          <a href="#"><img src="{{ asset('images/logo.png') }}" alt="logo"></a>
+        <a href="{{ route('main.page') }}"><img src="{{ asset('images/logo.png') }}" alt="logo"></a>
         </div>
 
         <ul class="mobile-menu">
@@ -126,7 +126,7 @@
         <a href="#" class="mobile-menu__btn" id="mobile-menu__btn">Меню</a>
 
         <div class="logo">
-          <a href="#"><img src="{{ asset('images/logo.png') }}" alt="logo"></a>
+          <a href="{{ route('main.page') }}"><img src="{{ asset('images/logo.png') }}" alt="logo"></a>
         </div>
 
         <ul class="menu" id="main-menu">

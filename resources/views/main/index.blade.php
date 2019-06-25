@@ -552,7 +552,7 @@
         <div class="offset-lg-1"></div>
 
         <div class="col-lg-3 col-md-3 col-sm-3 wow fadeInRight">
-            <a href="#" class="discounts__btn def-btn">Все новости</a>
+            <a href="{{ route('sales.page') }}" class="discounts__btn def-btn">Все скидки</a>
         </div>
         </div>
 

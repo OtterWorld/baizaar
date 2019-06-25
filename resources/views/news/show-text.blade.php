@@ -22,8 +22,13 @@
         </div>
 
         <div class="page">
-            <a id="down" class="wow fadeInLeft" href="#"><i class="fas fa-chevron-down"></i> Предыдущая новость</a>
-            <a id="up" class="wow fadeInRight" href="#">Слудующая новость <i class="fas fa-chevron-down"></i></a>
+            @if($previous)
+            <a id="down" class="wow fadeInLeft" href="{{ route('news.one.page', $previous) }}"><i class="fas fa-chevron-down"></i>Предыдущая новость</a>
+            @endif
+
+            @if($next)
+            <a id="up" class="wow fadeInRight" href="{{ route('news.one.page', $next) }}">Слудующая новость<i class="fas fa-chevron-down"></i></a>
+            @endif
         </div>
 
         </div>

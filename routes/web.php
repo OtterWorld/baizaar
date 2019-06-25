@@ -19,12 +19,18 @@ Route::get('/', 'MainController@index')
 Route::get('/schedule', 'ScheduleController@index')
     ->name('schedule.page');
 
+
+// Sales page
+Route::get('/sales', 'SalesController@index')
+    ->name('sales.page');
+
 Route::resource('/news', 'NewsController')
     ->except(['create','store','update', 'destroy'])
     ->names([
         'index' => 'news.all.page',
         'show' => 'news.one.page'
     ]);
+
 Route::get('/news/{id1}/{id}','NewsController@execute')->name('news');
 
 Route::group(['prefix' => 'admin'], function () {
