@@ -19,10 +19,20 @@ Route::get('/', 'MainController@index')
 Route::get('/schedule', 'ScheduleController@index')
     ->name('schedule.page');
 
-
 // Sales page
 Route::get('/sales', 'SalesController@index')
     ->name('sales.page');
+
+// Contacts page
+Route::get('/contacts', 'ContactsController@index')
+    ->name('contacts.page');
+
+// Shops page
+Route::resource('/shops', 'ShopsController')
+    ->only('show')
+    ->names([
+        'show' => 'shop.show.page'
+    ]);
 
 Route::resource('/news', 'NewsController')
     ->except(['create','store','update', 'destroy'])

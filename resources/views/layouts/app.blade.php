@@ -98,7 +98,7 @@
                       <ul id="subMenu{{ $child->id }}" style="display: none">
                           @foreach ($shops as $shop)
                               @if($shop->category_id == $child->id)
-                                <li><a href="#">{{ $shop->name }}</a></li>
+                              <li><a href="{{ route('shop.show.page', $shop) }}">{{ $shop->name }}</a></li>
                               @endif
                           @endforeach
                       </ul>

@@ -30,15 +30,9 @@ class NewsController extends Controller
 				$view = 'text';
 		}
 
-		$previous = News::find(
-			News::where('id', '<', $news->id)
-				->max('id')
-		);
+		$previous = News::previousItem($news->id);
+		$next = News::nextItem($news->id);
 
-		$next = News::find(
-			News::where('id', '>', $news->id)
-				->min('id')
-		);
 		return view('news.show-'.$view, compact('news', 'previous', 'next'));
 	}
 }
