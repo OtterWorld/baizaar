@@ -27,6 +27,22 @@ Route::get('/sales', 'SalesController@index')
 Route::get('/contacts', 'ContactsController@index')
     ->name('contacts.page');
 
+// Contacts page
+Route::get('/cooperations', 'CooperationsController@index')
+    ->name('cooperations.page');
+
+// Advertsing post page
+Route::post('/advertisings', 'AdvertisingsController@index')
+    ->name('advertisings.page.post');
+
+// Arendators post page
+Route::post('/arendators', 'ArendatorsController@index')
+    ->name('arendators.page.post');
+
+// Jobs post page
+Route::post('/jobs', 'JobsController@index')
+    ->name('jobs.page.post');
+
 // Shops page
 Route::resource('/shops', 'ShopsController')
     ->only('show')

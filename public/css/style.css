@@ -704,7 +704,7 @@
   font-weight: 700;
   font-family: 'Montserrat', sans-serif;
 }
-.cooperation .advertising__footer a{
+.cooperation .advertising__footer button{
   background-color: #69c22b;
   display: block;
   color: #fff;
@@ -778,7 +778,7 @@
   padding: 14px 21px 10px 21px;
   margin-bottom: 1rem;
 }
-.cooperation .rent__body .rent__body-input a{
+.cooperation .rent__body .rent__body-input button{
   background-color: #69c22b;
   font-weight: 700;
   font-size: 14px;
