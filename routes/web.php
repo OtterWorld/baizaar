@@ -15,6 +15,10 @@
 Route::get('/', 'MainController@index')
     ->name('main.page');
 
+// About page
+Route::get('/about', 'AboutsController@index')
+    ->name('about.page');
+
 // Schedule page
 Route::get('/schedule', 'ScheduleController@index')
     ->name('schedule.page');
@@ -61,9 +65,4 @@ Route::get('/news/{id1}/{id}','NewsController@execute')->name('news');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
-});
-
-
-Route::get('/test', function() {
-    dd(DB::table(DB::raw('news, sales'))->get());
 });
