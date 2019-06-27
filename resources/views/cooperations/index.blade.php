@@ -26,7 +26,9 @@
             <a class="cooperation-btn  wow fadeInRight" href="#jobs">вакансии</a>
 
         </div>
-
+        @if($errors->any())
+        @dump($errors)
+        @endif
         <!-- advertising -->
         <div class="advertising__main wow fadeInLeft" id="advertising">
         <div class="advertising-body">
@@ -81,7 +83,7 @@
         <div class="rent__body">
         <p class="rent__body-title">
             Заявка на арендную площадь в <span>ТРЦ BAIZAAR</span></p>
-            <form action="{{ route('arendators.page.post') }}" method="POST">
+            <form action="{{ route('arendators.page.post') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="row rent__body-input">
                     <div class="col-lg-4 col-md-4 col-sm-12">
@@ -90,7 +92,7 @@
                         <input type="text" name="activity_profile" placeholder="Профиль деятельности">
                         <input type="text" name="company_structure" placeholder="Структура компании">
                         <input type="text" name="target_audience" placeholder="Целевая аудитория">
-                        <input type="file" name="image">
+                        <input type="file" name="file">
                         <input type="text" name="market_experience" placeholder="Опыт работы на рынке">
                         <input type="text" name="target_segment" placeholder="Ценовой сегмент">
                     </div>
@@ -130,14 +132,14 @@
                     <p class="job__box-title">Требования</p>
                     {!! $job->requirements !!}
                     <p class="salary">{{ $job->salary }}</p>
-                    <form action="{{ route('jobs.page.post') }}" method="POST">
+                    <form action="{{ route('jobs.page.post') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <input type="hidden" name="job_id" value="{{ $job->id }}">
                         <input name="city" type="text" placeholder="Алматы">
                         <input name="name" type="text" placeholder="ФИО">
                         <input name="phone" type="text" placeholder="Телефон">
                         <input name="email" type="text" placeholder="Email">
-                        <input name="resume" class="file" type="file" accept="..." value="Выберите файл">
+                        <input name="resume" class="file" type="file">
                         <textarea name="comment" id="" placeholder="Ваш комментарий"></textarea>
                         <button class="btn">Отправить</button>
                     </form>

@@ -18,7 +18,7 @@
         <span class="line wow fadeInLeft"></span>
 
         <div class="main-text">
-            {!! $news->text !!}
+            <p id="text1" class="wow fadeInLeft">{!! $news->text !!}</p>
         </div>
 
         <div class="page">

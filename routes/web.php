@@ -62,3 +62,8 @@ Route::get('/news/{id1}/{id}','NewsController@execute')->name('news');
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+
+
+Route::get('/test', function() {
+    dd(DB::table(DB::raw('news, sales'))->get());
+});
