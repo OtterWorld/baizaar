@@ -2,14 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Job;
 use App\JobRequest;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use App\Mail\MailFromEmployee;
+use Illuminate\Support\Facades\Lang;
+use Illuminate\Support\Facades\Mail;
 
 class JobsController extends Controller
 {
     public function index(Request $request, JobRequest $jobRequest) {
-        // dd($request);
         $this->validate($request, [
             "job_id" => 'required|integer',
             "city" => 'required|string',
@@ -42,8 +45,9 @@ class JobsController extends Controller
             "resume" => $resumeFile,
             "comment" => $request->comment
         ]);
-
-        // Mail
-        return back();
+        $job = Job::select('job_title')->find($request->job_id)->job_title;
+        
+        Mail::to(setting('site.email'))->send(new MailFromEmployee($request->except('_token'), $resume, $job));
+        return back()->with(['request-succeeded' => 'Ваша заявка принята']);
     }
 }

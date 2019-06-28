@@ -14,6 +14,9 @@
                         @case($result instanceof App\Shop)
                             <a href="{{ route('shop.show.page', $result->id) }}">Подробнее</a>
                             @break
+                        @case($result instanceof App\Sale)
+                            <a href="{{ route('sales.show.page', $result->id) }}">Подробнее</a>
+                            @break
                         @default
                             
                     @endswitch  

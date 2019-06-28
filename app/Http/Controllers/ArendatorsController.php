@@ -5,11 +5,13 @@ namespace App\Http\Controllers;
 use App\Arendator;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use App\Mail\MailFromArendator;
+use Illuminate\Support\Facades\Lang;
+use Illuminate\Support\Facades\Mail;
 
 class ArendatorsController extends Controller
 {
     public function index(Request $request, Arendator $arendator) {
-        
         $this->validate($request, [
             "shop_name" => 'required',
             "brand" => 'required',
@@ -28,7 +30,7 @@ class ArendatorsController extends Controller
             "name" => 'required',
             "additional_information" => 'required',
         ]);
-
+        
         $folder = \Carbon\Carbon::parse(\Carbon\Carbon::now())->format('FY');
         $filename = Str::random(40).'.'.$request->file('file')->getClientOriginalExtension();
         $fileUploaded = $request->file('file')->storeAs('arendators/'.$folder, $filename, 'public');
@@ -61,6 +63,7 @@ class ArendatorsController extends Controller
             "additional_information" => $request->additional_information,   
         ]);
 
-        return redirect()->route('cooperations.page');
+        Mail::to(setting('site.email'))->send(new MailFromArendator($request->except('_token'), $fileUploaded));
+        return back()->with(['request-succeeded' => 'Ваша заявка принята']);
     }
 }

@@ -10,15 +10,19 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 class MailFromEmployee extends Mailable
 {
     use Queueable, SerializesModels;
-
+    public $data;
+    public $resume;
+    public $job;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($data, $resume, $job)
     {
-        //
+        $this->data = $data;
+        $this->resume = $resume;
+        $this->job = $job;
     }
 
     /**
@@ -28,6 +32,9 @@ class MailFromEmployee extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.employees.requested');
+        return $this
+            ->markdown('emails.employees.requested')
+            ->from(env('MAIL_USERNAME'))
+            ->with(['data' => $this->data, 'resume' => $this->resume, 'job' => $this->job]);
     }
 }

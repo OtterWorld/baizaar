@@ -10,15 +10,17 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 class MailFromArendator extends Mailable
 {
     use Queueable, SerializesModels;
-
+    public $data;
+    public $resume;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($data, $resume)
     {
-        //
+        $this->data = $data;
+        $this->resume = $resume;
     }
 
     /**
@@ -28,6 +30,9 @@ class MailFromArendator extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.arendators.requested');
+        return $this
+            ->markdown('emails.arendators.requested')
+            ->from(env('MAIL_USERNAME'))
+            ->with(['data' => $this->data, 'resume' => $this->resume]);
     }
 }

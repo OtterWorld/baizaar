@@ -7,16 +7,20 @@
 
         <div class="col-sm-12">
 
-        <ul class="p-link  wow fadeInLeft">
-            <li><a class="home" href="#">Главная</a></li>
-            <li>/</li>
-            <li><a href="#">O'STIN</a></li>
-        </ul>
+        {{ Breadcrumbs::render('cooperations') }}
         
         <p class="title wow fadeInLeft">сотрудничество</p>
 
         <span class="line wow fadeInLeft"></span>
-
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
         <div class="box">
 
             <a class="cooperation-btn  wow fadeInLeft" href="#rent">арендаторам</a>
@@ -26,8 +30,10 @@
             <a class="cooperation-btn  wow fadeInRight" href="#jobs">вакансии</a>
 
         </div>
-        @if($errors->any())
-        @dump($errors)
+        @if(session('request-succeeded'))
+        <script>
+        Swal.fire('{{ session("request-succeeded") }}')
+        </script>
         @endif
         <!-- advertising -->
         <div class="advertising__main wow fadeInLeft" id="advertising">

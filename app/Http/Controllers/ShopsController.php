@@ -15,3 +15,4 @@ class ShopsController extends Controller
         return view('shops.show', compact('shop', 'previous', 'next'));
     }
 }
+

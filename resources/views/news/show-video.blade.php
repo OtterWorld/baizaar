@@ -8,11 +8,7 @@
     
         <div class="col-sm-12">
     
-        <ul class="p-link  wow fadeInLeft">
-            <li><a class="home" href="#">Главная</a></li>
-            <li>/</li>
-            <li><a href="#">О компании</a></li>
-        </ul> 
+        {{ Breadcrumbs::render('news.one', $news->title, $news->id) }}
     
         <p class="title wow fadeInLeft">{{ $news->title }}</p>
     

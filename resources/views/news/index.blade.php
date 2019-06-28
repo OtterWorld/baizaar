@@ -5,11 +5,7 @@
 <div class="container sales">
     <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12">
-        <ul class="p-link  wow fadeInLeft">
-            <li><a class="home" href="#">Главная</a></li>
-            <li>/</li>
-            <li><a href="#">О компании</a></li>
-        </ul>
+        {{ Breadcrumbs::render('news') }}
         <p class="title wow fadeInLeft">Все события</p>
         <span class="line wow fadeInLeft"></span>
         <div class="wrapper__card row">

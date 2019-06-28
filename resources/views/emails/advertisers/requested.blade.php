@@ -1,12 +1,14 @@
 @component('mail::message')
-# Introduction
+# Письмо от Рекламодателя
 
-The body of your message.
-
-@component('mail::button', ['url' => ''])
-Button Text
-@endcomponent
-
-Thanks,<br>
+Бренд: {{ $data['brand'] }}<br><br>
+Предполагаемый вид размещения рекламы или проведения мероприятия: {{ $data['type'] }}<br><br>
+Если проведение промо-акции или мероприятия, то предполагаемая площадь в м2: {{ $data['area_needed'] }}<br><br>
+Предполагаемая дата проведения промо-акции (мероприятия) или размещения на рекламных конструкциях: {{ $data['date'] }}<br><br>
+Концепция и механика проведения промо-акции (мероприятия): {{ $data['conception'] }}<br><br>
+E-mail: {{ $data['email'] }}<br><br>
+ФИО: {{ $data['name'] }}<br><br>
+Дополнительная информация: {{ $data['additional_information'] }}
+Thanks,<br><br>
 {{ config('app.name') }}
 @endcomponent

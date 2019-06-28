@@ -16,6 +16,10 @@ class SalesController extends Controller
     }
 
     public function show(Sale $sale) {
-        dd($sale);
+
+        $previous = Sale::previousItem($sale->id);
+        $next = Sale::nextItem($sale->id);
+        
+        return view('sales.show', compact('sale', 'previous', 'next'));
     }
 }

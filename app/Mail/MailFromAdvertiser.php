@@ -10,15 +10,15 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 class MailFromAdvertiser extends Mailable
 {
     use Queueable, SerializesModels;
-
+    public $data;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($data)
     {
-        //
+        $this->data = $data;
     }
 
     /**
@@ -28,6 +28,9 @@ class MailFromAdvertiser extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.advertisers.requested');
+        return $this
+            ->markdown('emails.advertisers.requested')
+            ->from(env('MAIL_USERNAME'))
+            ->with(['data' => $this->data]);
     }
 }

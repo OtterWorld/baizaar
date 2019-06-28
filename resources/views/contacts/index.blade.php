@@ -5,11 +5,7 @@
 <div class="container contact">
     <div class="row">
         <div class="col-lg-9 col-md-9 col-sm-12">
-        <ul class="p-link">
-            <li><a class="home" href="#">Главная</a></li>
-            <li>/</li>
-            <li><a href="#">О компании</a></li>
-        </ul>
+        {{ Breadcrumbs::render('contacts') }}
         <p class="title">Контакты</p>
         <span class="line"></span>
         <div class="contact__map">

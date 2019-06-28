@@ -12,11 +12,21 @@ use Illuminate\Pagination\LengthAwarePaginator;
 class SearchController extends Controller
 {
     public function index(Request $request, News $news, Shop $shop, Sale $sale) {
-        $newsResult = $news->select(['id', 'title'])->where('title','LIKE', '%'.$request->input('query').'%')->get();
-        $shopsResult = $shop->select(['id', 'name as title'])->where('name','LIKE', '%'.$request->input('query').'%')->get();
-        $salesResult = $sale->select(['id', \DB::raw('CONCAT(substr(description, 1, 75), "...") as title')])->where('description','LIKE', '%'.$request->input('query').'%')->get();
-
-        $searchResults = collect([])->merge($newsResult)->merge($shopsResult)->merge($salesResult);
+        $newsResult = $news->select(['id', 'title', 'text as body'])
+            ->WhereRaw("MATCH(news.text) AGAINST('".$request->input('query')."*' IN BOOLEAN MODE)")
+            ->get();
+        
+        $shopsResult = $shop->select(['id', 'name as title'])
+            ->where('name','LIKE', '%'.$request->input('query').'%')
+            ->get();
+        
+        $salesResult = $sale
+            ->select(['id', \DB::raw('CONCAT(substr(description, 1, 75), "...") as description')])
+            ->where('description','LIKE', '%'.$request->input('query').'%')
+            ->where('title','LIKE', '%'.$request->input('query').'%')
+            ->get();
+        
+            $searchResults = collect([])->merge($newsResult)->merge($shopsResult)->merge($salesResult);
 
          //Get current page form url e.g. &page=6
         $currentPage = LengthAwarePaginator::resolveCurrentPage();

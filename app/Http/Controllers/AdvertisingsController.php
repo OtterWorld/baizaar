@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Advertiser;
 use Illuminate\Http\Request;
+use App\Mail\MailFromAdvertiser;
+use Illuminate\Support\Facades\Lang;
+use Illuminate\Support\Facades\Mail;
 
 class AdvertisingsController extends Controller
 {
@@ -30,7 +33,7 @@ class AdvertisingsController extends Controller
                 "name" => $request->name,
                 "additional_information" => $request->additional_information
             ]);
-        
-        return back()->with(['advertised' => true]);
+        Mail::to(setting('site.email'))->send(new MailFromAdvertiser($request->except('_token')));
+        return back()->with(['request-succeeded' => 'Ваша заявка принята']);
     }
 }
