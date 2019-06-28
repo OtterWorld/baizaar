@@ -70,7 +70,7 @@
     <section class="floor-map">
 
     <div class="autopsy-floor-map">
-        <a  href="#floor-map__wrap">
+        <a href="#floor-map__wrap" style="{{ $styles[0] ?: '' }}">
         <img src="images/location.png" alt="Закрыть карту этажей">
         Открыть карту этажей
         </a>
@@ -94,12 +94,12 @@
                 <div class="floor-map-tabs__wrap">
 
                 <div class="floor-map-tabs__link">
-                    <a href="#parking">p</a>
-                    <a class="floor-map-tabs__link__active" href="#floor-1">1</a>
-                    <a href="#floor-2">2</a>
-                    <a href="#floor-3">3</a>
-                    <a href="#floor-4">4</a>
-                    <a href="#floor-5">5</a>
+                    <a href="#parking" style="{{ $styles[0] ?: '' }}">p</a>
+                    <a class="floor-map-tabs__link__active" href="#floor-1" style="{{ $styles[0] ?: '' }}">1</a>
+                    <a href="#floor-2" style="{{ $styles[0] ?: '' }}">2</a>
+                    <a href="#floor-3" style="{{ $styles[0] ?: '' }}">3</a>
+                    <a href="#floor-4" style="{{ $styles[0] ?: '' }}">4</a>
+                    <a href="#floor-5" style="{{ $styles[0] ?: '' }}">5</a>
                 </div>
 
                 <!-- 0 -->
@@ -525,8 +525,8 @@
                 <h3 class="floor-map__zoom__title">Zoom</h3>
 
                 <div class="floor-map__zoom__btn">
-                    <a href="#" class="floor-plus">+</a>
-                    <a href="#" class="floor-minus">-</a>
+                    <a href="#" class="floor-plus" style="{{ $styles[0] ?: '' }}">+</a>
+                    <a href="#" class="floor-minus" style="{{ $styles[0] ?: '' }}">-</a>
                 </div>
 
                 </div>
@@ -567,7 +567,7 @@
             <div class="discount-slide__wrap">
 
                 <div class="discount-slide__item" style="background-image: url({{ asset('storage/' . $sale->image) }});">
-                    <div class="discount-percent">
+                    <div class="discount-percent" style="{{ $styles[1] ?: '' }}">
                     Скидка <span class="percent__item">-{{ $sale->percentage }}%</span>
                     </div>
         
@@ -627,7 +627,7 @@
             <div class="developments-slide__item">
 
                 <div class="developments-slide__top" style="background-image: url({{ asset('storage/'.$newsItem->image) }});">
-                    <div class="developments-percent">
+                    <div class="developments-percent" style="{{ $styles[2] ?: '' }}">
                     {{ $newsItem->month }} <span class="percent__item">{{ $newsItem->day }}</span>
                     </div>
                 </div>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\News;
+use App\Block;
 use App\Slider;
 use App\Partner;
 use App\RenderedSale;
@@ -32,6 +33,17 @@ class MainController extends Controller
         $partners = $partner
             ->get();
         
-        return view('main.index', compact('sales', 'news', 'sliders', 'bottomSlider', 'partners'));
+        $blocks = Block::with('style')->get();
+        $styles = [];
+        foreach($blocks as $key => $block) {
+            if(isset($block->style)) {
+                $styles[$key] = '';
+                foreach($block->style as $key1 => $style) {
+                    $styles[$key] .= $style->key. ':' .$style->value.';';
+                }
+            }
+        }
+
+        return view('main.index', compact('sales', 'news', 'sliders', 'bottomSlider', 'partners', 'styles'));
     }
 }
