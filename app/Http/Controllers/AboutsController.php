@@ -9,6 +9,7 @@ class AboutsController extends Controller
 {
     public function index(Page $page) {
         $pages = $page
+            ->where('pages.id', 1)
             ->join('page_contents', 'page_contents.page_id','=','pages.id')
             ->get()
             ->groupBy('page_name');

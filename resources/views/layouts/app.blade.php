@@ -31,8 +31,10 @@
     <div class="search__wrap">
 
       <div class="search__item" id="search__item">
-        <input type="text" placeholder="Введите слово для поиска">
-        <button><img src="{{ asset('images/loupe-white.png') }}" alt="loupe"></button>
+        <form action="{{ route('search.page') }}" method="GET">
+          <input type="text" name="query" placeholder="Введите слово для поиска" value="{{ \Request::input('query') }}">
+          <button><img src="{{ asset('images/loupe-white.png') }}" alt="loupe"></button>
+        </form>
       </div>
 
     </div>

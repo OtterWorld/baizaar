@@ -14,4 +14,8 @@ class SalesController extends Controller
         
         return view('sales.index', compact('sales'));
     }
+
+    public function show(Sale $sale) {
+        dd($sale);
+    }
 }

@@ -12,7 +12,7 @@
         </ul> 
         <p class="title">{{ $shop->name }}</p>
         <span class="line"></span>
-        <div class="container-fluid magazine-image" style="background-image: url({{ asset('storage/'.$shop->image) }});">
+        <div class="container-fluid magazine-image" style="background-image: url({{ asset('storage/'.$shop->thumbnail) }});">
         </div>
         <div class="page-magazine">
             @if($previous)

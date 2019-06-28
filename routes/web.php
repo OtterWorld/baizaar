@@ -19,13 +19,25 @@ Route::get('/', 'MainController@index')
 Route::get('/about', 'AboutsController@index')
     ->name('about.page');
 
+// Info page
+Route::get('/info', 'InfosController@index')
+    ->name('info.page');
+
+// Info page
+Route::get('/search', 'SearchController@index')
+    ->name('search.page');
+
 // Schedule page
 Route::get('/schedule', 'ScheduleController@index')
     ->name('schedule.page');
 
 // Sales page
-Route::get('/sales', 'SalesController@index')
-    ->name('sales.page');
+Route::resource('/sales', 'SalesController')
+    ->only(['index', 'show'])
+    ->names([
+        'index' => 'sales.page',
+        'show' => 'sales.show.page'
+    ]);
 
 // Contacts page
 Route::get('/contacts', 'ContactsController@index')
