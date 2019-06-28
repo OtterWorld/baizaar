@@ -12,6 +12,8 @@ class News extends Model
 {
     use ChoosesNext, ChoosesPrevious, Translatable;
     
+    protected $translatable = ['title', 'description', 'text', 'month'];
+    
     protected $table = 'news';
 
     protected $fillable = [

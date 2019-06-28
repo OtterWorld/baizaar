@@ -2,12 +2,14 @@
 
 namespace App;
 use Kalnoy\Nestedset\NodeTrait;
+use TCG\Voyager\Traits\Translatable;
 use Illuminate\Database\Eloquent\Model;
 
 class NestedCategory extends Model
 {
-    use NodeTrait;
-
+    use NodeTrait, Translatable;
+    protected $translatable = ['name'];
+    
     static public function traverse($categories) {
         foreach ($categories as $category) {
             echo '<li>';

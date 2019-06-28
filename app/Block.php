@@ -11,5 +11,5 @@ class Block extends Model
     public function style()
     {
         return $this->hasMany('App\Style');
-    }    
+    }
 }
