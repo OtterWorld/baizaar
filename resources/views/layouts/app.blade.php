@@ -18,7 +18,6 @@
   <script src="{{ asset('js/jquery-3.2.1.min.js') }}"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 </head>
-
 <body>
   <section id="up"></section>
   <!-- start particles -->

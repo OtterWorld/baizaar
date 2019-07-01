@@ -51,7 +51,7 @@ Breadcrumbs::for('shops', function ($trail, $name, $id) {
 
 // News One
 Breadcrumbs::for('news.one', function ($trail, $name, $id) {
-    $trail->parent('main');
+    $trail->parent('news');
     $trail->push($name, route('news.one.page', $id));
 });
 
@@ -65,4 +65,10 @@ Breadcrumbs::for('sales.one', function ($trail, $name, $id) {
 Breadcrumbs::for('cooperations', function ($trail) {
     $trail->parent('main');
     $trail->push(Lang::get('interface.title.cooperation'), route('cooperations.page'));
+});
+
+// Search
+Breadcrumbs::for('search', function ($trail, $query) {
+    $trail->parent('main');
+    $trail->push(Lang::get('interface.title.search').' - '.$query, route('search.page'));
 });

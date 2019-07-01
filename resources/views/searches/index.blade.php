@@ -1,7 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container py-5 my-5">
+    <div class="container py-5 my-5 cooperation">
+        <div class="row">
+            {{ Breadcrumbs::render('search', $query) }}
+        </div>
         @foreach ($paginatedSearchResults as $result)
             <div class="py-3">
                 <h4>{{ strip_tags($result->title) }}</h4>

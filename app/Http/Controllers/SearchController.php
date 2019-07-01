@@ -17,18 +17,19 @@ class SearchController extends Controller
     public function index(Request $request, News $news, Shop $shop, Sale $sale) {
         if($request->has('query'))
         {
-            $newsResult = $news->selectRaw("id,title, SUBSTRING(news.text , (SELECT POSITION('".$request->input('query')."' IN news.text)), 140) AS body")
-                ->WhereRaw("MATCH(news.text) AGAINST('*".$request->input('query')."*' IN BOOLEAN MODE)")
+            $query = $request->input('query');
+            $newsResult = $news->selectRaw("id,title, SUBSTRING(news.text , (SELECT POSITION('".$query."' IN news.text)), 140) AS body")
+                ->WhereRaw("MATCH(news.text) AGAINST('*".$query."*' IN BOOLEAN MODE)")
                 ->get();
             
             $shopsResult = $shop->select(['id', 'name as title'])
-                ->where('name','LIKE', '%'.$request->input('query').'%')
+                ->where('name','LIKE', '%'.$query.'%')
                 ->get();
             
             $salesResult = $sale
                 ->select(['id', 'title',\DB::raw('CONCAT(substr(description, 1, 75), "...") as description')])
-                ->where('description','LIKE', '%'.$request->input('query').'%')
-                ->where('title','LIKE', '%'.$request->input('query').'%')
+                ->where('description','LIKE', '%'.$query.'%')
+                ->where('title','LIKE', '%'.$query.'%')
                 ->get();
             
                 $searchResults = collect([])->merge($newsResult)->merge($shopsResult)->merge($salesResult);
@@ -49,7 +50,7 @@ class SearchController extends Controller
                 ->setPath(route('search.page'))    
                 ->appends($request->all());
             
-            return view('searches.index', compact('paginatedSearchResults'));
+            return view('searches.index', compact('paginatedSearchResults', 'query'));
         }
         return abort(404);
     }
