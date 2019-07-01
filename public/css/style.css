@@ -453,6 +453,15 @@
           justify-content: flex-start; }
   .open-menu__wrap .open-menu__left {
     margin-right: 35px; }
+.open-menu__wrap .open-menu__right .discount-img__top img{
+	width:550px;
+	height: 20rem;
+	
+}
+.open-menu__wrap .open-menu__right .discount-img__bottom img{
+	max-width: 130px;
+	max-height: 80px;
+}
   .open-menu__wrap .open-menu__right .discount-img__bottom {
     display: -webkit-box;
     display: -webkit-flex;
@@ -2213,6 +2222,9 @@ left: 50rem;}
 /* developments */
 .developments {
   margin-top: 10rem; }
+.developments .owl-carousel .owl-stage{
+	width: 100%;   
+}
   .developments .developments__text {
     margin-top: 38px; }
     .developments .developments__text p {
@@ -2231,6 +2243,7 @@ left: 50rem;}
             justify-content: space-between;
     margin-top: 40px; }
     .developments .developments-slide .developments-slide__item {
+		min-width: 269px;
       max-width: 270px;
       width: 100%;
       display: block; }
@@ -2238,6 +2251,7 @@ left: 50rem;}
         height: 245px;
         position: relative; }
       .developments .developments-slide .developments-slide__item .developments-slide__bottom {
+		  width: 100%;
         background-color: #f6f6f6;
         padding: 20px;
         -webkit-transition: 0.5s ease;
@@ -3968,6 +3982,9 @@ left: 50rem;}
   margin-top: 120px;
   margin-bottom: 60px;
 }
+.about{
+	padding-bottom: 25rem;
+}
 .about .row .p-link{
   list-style: none;
   display: flex;
@@ -4038,6 +4055,11 @@ left: 50rem;}
 .about .slide-text .carousel-item{
   padding: 4rem;
 }
+@media only screen and (max-width: 576px){
+	.about .slide-text .carousel-item{
+		padding: 4rem 2rem;
+	}
+}
 .about .slide-text .carousel-item p{
   font-weight:  400;
 }
@@ -4050,10 +4072,29 @@ left: 50rem;}
   top: 20rem;
   left: 10rem;
 }
+@media only screen and (max-width: 576px){
+	.about .carousel-slide-text{
+		top: 7rem;
+		left: 0;
+	}
+}
 .about .slide-text .carousel-control-next,
 .about .slide-text .carousel-control-prev{
   position: absolute;
   bottom: -25rem;
+}
+@media only screen and (max-width: 576px){
+	.about .slide-text .carousel-control-next,
+	.about .slide-text .carousel-control-prev{
+		position: absolute;
+		top: 25rem;
+	}
+	.about .slide-text .carousel-control-prev{
+  left: 15% !important;
+}
+.about .slide-text .carousel-control-next{
+  right: 15% !important;
+}
 }
 .about .slide-text .carousel-control-prev{
   left: 35%;

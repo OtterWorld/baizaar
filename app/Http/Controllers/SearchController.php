@@ -20,6 +20,7 @@ class SearchController extends Controller
             $query = $request->input('query');
             $newsResult = $news->selectRaw("id,title, SUBSTRING(news.text , (SELECT POSITION('".$query."' IN news.text)), 140) AS body")
                 ->WhereRaw("MATCH(news.text) AGAINST('*".$query."*' IN BOOLEAN MODE)")
+                ->orWhere('news.title', $query)
                 ->get();
             
             $shopsResult = $shop->select(['id', 'name as title'])
