@@ -1,17 +1,26 @@
 <?php 
 
 return [
+    'fax' => 'Факс',
+    'email' => 'Эл.почта',
+    'schedule' => 'График работы магазина',
+    'address' => 'Адрес',
+    'from' => 'с',
+    'to' => 'до',
+    'hours' => 'часов',
+    'sale' => 'Скидка',
     'buttons' => [
         'more' => 'Подробнее',
         'allEvents' => 'Все события',
         'allSales' => 'Все скидки',
         'instagram' => 'Мы в инстаграм',
-        'next' => 'Следующ:ending :entity',
-        'previous' => 'Предыдущ:ending :entity',
+        'nextNews' => 'Следующая новость',
+        'previousNews' => 'Предыдущая новость',
         'floorsMap' => 'Открыть карту этажей',
         'showOngMap' => 'Посмотреть на карте'
     ],
     'title' => [
+        'contacts' => 'Конакты',
         'cooperation' => 'Сотрудничество', 
         'about' => 'О ТРЦ',
         'search' => 'Поиск',

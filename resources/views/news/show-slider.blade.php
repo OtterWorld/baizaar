@@ -40,11 +40,11 @@
         
          <div class="page">
             @if($previous)
-            <a id="down" class="wow fadeInLeft" href="{{ route('news.one.page', $previous) }}"><i class="fas fa-chevron-down"></i>Предыдущая новость</a>
+            <a id="down" class="wow fadeInLeft" href="{{ route('news.one.page', $previous) }}"><i class="fas fa-chevron-down"></i>@lang('interface.buttons.previousNews')</a>
             @endif
 
             @if($next)
-            <a id="up" class="wow fadeInRight" href="{{ route('news.one.page', $next) }}">Слудующая новость<i class="fas fa-chevron-down"></i></a>
+            <a id="up" class="wow fadeInRight" href="{{ route('news.one.page', $next) }}">@lang('interface.buttons.nextNews')<i class="fas fa-chevron-down"></i></a>
             @endif
         </div>
 

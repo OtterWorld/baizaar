@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-lg-9 col-md-9 col-sm-12">
         {{ Breadcrumbs::render('contacts') }}
-        <p class="title">Контакты</p>
+        <p class="title">@lang('interface.title.contacts')</p>
         <span class="line"></span>
         <div class="contact__map">
         <div id="wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3">
@@ -28,10 +28,10 @@
         <div class="contact__info">
             <p class="num">{{ $contacts->phone }}</p>
             <ul>
-            <li><span>Факс:</span> {{ $contacts->fax }}</li>
-            <li><span>Эл.почта:</span> {{ $contacts->email }}</li>
-            <li><span>График работы магазина:</span><br> с {{ $contacts->start }} до {{ $contacts->end }} часов</li>
-            <li><span>Адрес:</span> {{ $contacts->address }}</li>
+            <li><span>@lang('interface.fax'):</span> {{ $contacts->fax }}</li>
+            <li><span>@lang('interface.email'):</span> {{ $contacts->email }}</li>
+            <li><span>@lang('interface.schedule'):</span><br> @lang('interface.from') {{ $contacts->start }} @lang('interface.to') {{ $contacts->end }} @lang('interface.hours')</li>
+            <li><span>@lang('interface.address'):</span> {{ $contacts->address }}</li>
             </ul>
             <span class="line"></span>
             <p class="text">{{ $contacts->location_description }}</p>

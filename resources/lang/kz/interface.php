@@ -1,6 +1,13 @@
 <?php 
 
 return [
+    'fax' => 'Факс',
+    'email' => 'Эл.почта',
+    'schedule' => 'График работы магазина',
+    'address' => 'Адрес',
+    'from' => 'с',
+    'to' => 'до',
+    'hours' => 'часов',
     'buttons' => [
         'more' => 'Подробнее',
         'allEvents' => 'Все события',
@@ -12,6 +19,7 @@ return [
         'showOngMap' => 'Посмотреть на карте'
     ],
     'title' => [
+        'contacts' => 'Конакты',
         'cooperation' => 'Сотрудничество', 
         'about' => 'О ТРЦ',
         'search' => 'Поиск',

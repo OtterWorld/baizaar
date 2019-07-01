@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12">
         {{ Breadcrumbs::render('news') }}
-        <p class="title wow fadeInLeft">Все события</p>
+        <p class="title wow fadeInLeft">@lang('interface.buttons.allEvents')</p>
         <span class="line wow fadeInLeft"></span>
         <div class="wrapper__card row">
             @foreach ($news as $newsItem)

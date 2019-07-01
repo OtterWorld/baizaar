@@ -33,7 +33,7 @@
                     <div class="banner__items">
                     <h3>{{ $slider->title }}</h3>
                     <a href="{{ $slider->url }}" class="banner__btn {{ $slider->button_position }}">
-                        Подробнее...
+                        @lang('interface.buttons.more')...
                         <span class="button__stroke"></span>
                         <span class="button-underline__horizontal"></span>
                         <span class="button-underline__vertical"></span>
@@ -72,7 +72,7 @@
     <div class="autopsy-floor-map">
         <a href="#floor-map__wrap" style="{{ $styles[0] ?: '' }}">
         <img src="images/location.png" alt="Закрыть карту этажей">
-        Открыть карту этажей
+        @lang('interface.buttons.floorsMap')
         </a>
     </div>
 
@@ -82,14 +82,14 @@
 
         <div class="row wow fadeInLeft">
             <div class="col-12">
-            <h1 class="floor-map__title def-title">Карта этажей</h1>
+            <h1 class="floor-map__title def-title">@lang('interface.title.floorsMap')</h1>
             </div>
         </div>
 
         <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-12" data-aos="fade-right">
             <div class="floor-map__left">
-                <h3 class="small__title">Этаж</h3>
+                <h3 class="small__title">@lang('interface.title.floor')</h3>
 
                 <div class="floor-map-tabs__wrap">
 
@@ -545,14 +545,14 @@
     <div class="container">
 
         <div class="row">
-        <div class="col-lg-8 col-md-8 wow fadeInLeft">
-            <h1 class="floor-map__title def-title">Акции, скидки и специальные предложения</h1>
+        <div class="col-lg-8 col-md-8 wow fadeInLeft">  
+            <h1 class="floor-map__title def-title">@lang('interface.title.sales')</h1>
         </div>
 
         <div class="offset-lg-1"></div>
 
         <div class="col-lg-3 col-md-3 col-sm-3 wow fadeInRight">
-            <a href="{{ route('sales.page') }}" class="discounts__btn def-btn">Все скидки</a>
+            <a href="{{ route('sales.page') }}" class="discounts__btn def-btn">@lang('interface.buttons.allSales')</a>
         </div>
         </div>
 
@@ -568,7 +568,7 @@
 
                 <div class="discount-slide__item" style="background-image: url({{ asset('storage/' . $sale->image) }});">
                     <div class="discount-percent" style="{{ $styles[1] ?: '' }}">
-                    Скидка <span class="percent__item">-{{ $sale->percentage }}%</span>
+                    @lang('interface.sale') <span class="percent__item">-{{ $sale->percentage }}%</span>
                     </div>
         
                     <a href="#" class="discount__text">
@@ -594,13 +594,13 @@
 
         <div class="row">
         <div class="col-lg-4 col-md-4 wow fadeInLeft">
-            <h1 class="floor-map__title def-title">Интересные события</h1>
+            <h1 class="floor-map__title def-title">@lang('interface.title.events')</h1>
         </div>
 
         <div class="offset-lg-5"></div>
 
         <div class="col-lg-3 wow fadeInRight">
-            <a href="{{ route('news.all.page') }}" class="development__btn def-btn">Все события</a>
+            <a href="{{ route('news.all.page') }}" class="development__btn def-btn">@lang('interface.buttons.allEvents')</a>
         </div>
         </div>
 
@@ -635,7 +635,7 @@
                 <div class="developments-slide__bottom hvr-shutter-out-horizontal">
                     <p class="developments-slide__text">{{ $newsItem->description }}</p>
 
-                    <a href="{{ route('news.one.page', $newsItem) }}" class="developments-slide__btn">Подробнее...</a>
+                    <a href="{{ route('news.one.page', $newsItem) }}" class="developments-slide__btn">@lang('interface.buttons.more')...</a>
                 </div>
 
             </div>
@@ -649,7 +649,7 @@
 
         </div>
 
-        <a href="#" class="instagram__btn def-btn wow fadeInRight">Мы в инстаграм</a>
+        <a href="#" class="instagram__btn def-btn wow fadeInRight">@lang('interface.buttons.instagram')</a>
 
     </div>
 
@@ -693,8 +693,8 @@
         <div class="col-lg-5 col-md-5 wow fadeInLeft">
 
             <div class="subscribe__title__wrap">
-            <h1 class="def-title subscribe__title">Подпишись на рассылку</h1>
-            <p>И получи список <span class="def-bold">выгодных предложений</span></p>
+            <h1 class="def-title subscribe__title">@lang('interface.mailing.title')</h1>
+            <p>@lang('interface.mailing.subtitle')</p>
             </div>
             
         </div>
@@ -703,14 +703,15 @@
             <div class="subscribe__email">
             <form action="">
                 <div class="subscribe__input">
-                <input type="text" placeholder="Ваша почта">
-                <button class="hvr-radial-out">Отправить</button>
+                <input type="text" placeholder="@lang('interface.form.yourEmail')">
+                <button class="hvr-radial-out">@lang('interface.form.send')</button>
                 </div>
             </form>
 
             <div class="subscribe__checkbox">
                 <input type="checkbox" id="subscribe__checkbox">
-                <label for="subscribe__checkbox">Даю согласие на обработку <span class="underline">персональных данных</span></label>
+                <label for="subscribe__checkbox">@lang('interface.form.agreement') <span class="underline">
+                    @lang('interface.form.privateData')</span></label>
             </div>
 
             </div>
@@ -732,7 +733,7 @@
 
         <div class="row">
             <div class="col-12 wow fadeInLeft">
-            <h1 class="def-title partners-title">Наши партнеры</h1>
+            <h1 class="def-title partners-title">@lang('interface.title.partners')</h1>
             </div>
         </div>
 
