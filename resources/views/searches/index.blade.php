@@ -5,6 +5,11 @@
         @foreach ($paginatedSearchResults as $result)
             <div class="py-3">
                 <h4>{{ strip_tags($result->title) }}</h4>
+                @isset($result->body)
+                <div>
+                    {!! strip_tags($result->body).'...' !!}
+                </div>
+                @endisset
                 <div>
                     @switch($result)
                         @case($result instanceof App\News)
