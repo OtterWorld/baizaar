@@ -1877,6 +1877,9 @@ left: 50rem;}
 /* main banner responsive end */
 /* main banner end */
 /* floor map */
+
+
+
 .floor-map {
   padding-bottom: 80px; }
   .floor-map .autopsy-floor-map {
@@ -2030,11 +2033,395 @@ left: 50rem;}
       -o-transition: 0.5s ease;
       transition: 0.5s ease;
       width: 100%;
-      display: block; }
+    /*  display: block;*/ }
     .floor-map .floor-map__right .floor-map__zoom {
       position: absolute;
       right: 0;
       top: 0; }
+      .floor-map .floor-map__right .map-default {
+        display: none;
+     }
+     .floor-map .floor-map__right .map-active{
+      display: block;
+    }
+
+     /*SVG styles*/
+     /*map svg*/
+
+     .floor-map .floor-map__right   .kazpost:hover{
+      fill: #3E4095;
+     }
+     .floor-map .floor-map__right   .iclean:hover,
+     .floor-map .floor-map__right   .beeline:hover,
+     .floor-map .floor-map__right   .atelie,
+     .floor-map .floor-map__right   .terminal,   
+     .floor-map .floor-map__right   .fun_party:hover,
+     .floor-map .floor-map__right   .terminal:hover,
+     .floor-map .floor-map__right   .kazpost:hover{
+      fill: #0098DA;
+     }
+
+
+     .floor-map .floor-map__right   .outlet__city:hover,
+     .floor-map .floor-map__right   .intertop:hover,
+     .floor-map .floor-map__right   .flo:hover,
+     .floor-map .floor-map__right   .cabani:hover {
+      fill: #52658C;
+     }
+     
+     
+     .floor-map .floor-map__right  .toilet_m:hover,
+     .floor-map .floor-map__right  .wardrobe:hover,
+     .floor-map .floor-map__right  .toilet_north_f:hover,
+     .floor-map .floor-map__right  .toilet_north_m:hover,
+     .floor-map .floor-map__right  .toilet_south_f:hover,
+     .floor-map .floor-map__right  .toilet_south_m:hover,
+     .floor-map .floor-map__right  .lift:hover,
+     .floor-map .floor-map__right  .toilet_m,
+     .floor-map .floor-map__right   .zelenaya_apteka:hover{
+      fill: #71A72B;
+     }
+
+     .floor-map .floor-map__right  .detskii_mir:hover,
+     .floor-map .floor-map__right  .honey:hover{
+      fill: #A8CF45;
+     }
+     .floor-map .floor-map__right  .toilet_south_m
+     
+    
+
+     .floor-map .floor-map__right   .ikki:hover,
+     .floor-map .floor-map__right   .mavi_jeans:hover,
+     .floor-map .floor-map__right   .lichi:hover,
+     .floor-map .floor-map__right   .ds_damat:hover,
+     .floor-map .floor-map__right   .enrico_marinelli:hover,
+     .floor-map .floor-map__right   .giovane:hover,
+     .floor-map .floor-map__right   .glasman:hover,
+     .floor-map .floor-map__right   .colins:hover,
+     .floor-map .floor-map__right   .koton:hover,
+     .floor-map .floor-map__right   .ltb:hover {
+      fill: #51A8B1;
+     }
+
+     .floor-map .floor-map__right   .code_de_vie:hover,
+     .floor-map .floor-map__right   .missha:hover,
+     .floor-map .floor-map__right   .rocher:hover,
+     .floor-map .floor-map__right   .wycon:hover,
+     .floor-map .floor-map__right   .nature_republic:hover,
+     .floor-map .floor-map__right   .asian_cosmetics:hover,
+     .floor-map .floor-map__right   .neri_karra:hover,
+     .floor-map .floor-map__right   .inglot:hover,
+     .floor-map .floor-map__right   .eyfel:hover{
+
+      fill: #F7ADAF;
+     }
+
+
+
+     .floor-map .floor-map__right   .miniso:hover,
+     .floor-map .floor-map__right  .euromagia:hover,
+     .floor-map .floor-map__right  .vtrende_lux:hover,
+     .floor-map .floor-map__right  .diva:hover{
+      fill: #FFCC29;
+     }
+
+     .floor-map .floor-map__right   .glo_studio:hover,
+     .floor-map .floor-map__right   .sherlock:hover,
+     .floor-map .floor-map__right   .faber_castell:hover,
+     .floor-map .floor-map__right   .administration:hover{
+      fill: #A98F71;
+     }
+
+     
+     
+     
+    
+     .floor-map .floor-map__right   .anawa_kids:hover,
+     .floor-map .floor-map__right   .mama_pochitai:hover{
+      fill: #D2AE6D;
+     }
+     
+     .floor-map .floor-map__right   .diva,
+
+
+     .floor-map .floor-map__right   .ELP:hover,
+     .floor-map .floor-map__right   .mix_imperia:hover,
+     .floor-map .floor-map__right   .pandora:hover,
+     .floor-map .floor-map__right   .anelli:hover,
+     .floor-map .floor-map__right  .serebroff:hover, 
+     .floor-map .floor-map__right  .lalo:hover,
+     .floor-map .floor-map__right  .national-jewerly:hover,
+     .floor-map .floor-map__right   .parovozik:hover{
+      fill: #A8518A;
+     }
+
+     
+     .floor-map .floor-map__right   .kfc:hover,
+     .floor-map .floor-map__right   .coffee_like:hover,
+     .floor-map .floor-map__right   .chuchvara2:hover,
+     .floor-map .floor-map__right   .chuchvara:hover,
+     .floor-map .floor-map__right   .bambino:hover,
+     .floor-map .floor-map__right   .pizzaro:hover,
+     .floor-map .floor-map__right   .pappas_pizza:hover ,
+     .floor-map .floor-map__right   .redway:hover,
+     .floor-map .floor-map__right   .burger_time:hover,
+     .floor-map .floor-map__right   .best_shawarma:hover,
+     .floor-map .floor-map__right   .zhekas_ice:hover,
+     .floor-map .floor-map__right   .actual_optics:hover:hover,
+     .floor-map .floor-map__right   .travelers_coffee:hover{
+      fill: #ED2F59;
+     }
+    
+     .floor-map .floor-map__right   .trolley,
+
+     .floor-map .floor-map__right   .rk-tel:hover,
+     .floor-map .floor-map__right   .lego_qala:hover,
+     .floor-map .floor-map__right   .play_park:hover
+    {
+      fill: #A46080;
+     }
+    
+     .floor-map .floor-map__right   .baby_room:hover{
+      fill: #EC268F;
+     }
+    
+     .floor-map .floor-map__right   .mobile_services:hover{
+      fill: #718FC8;
+     }
+     .floor-map .floor-map__right   .mobile_services
+     {
+      fill: #D2D3D5;
+
+     }
+  
+     .floor-map .floor-map__right   .kazpost:hover{
+      fill: #3E4095;
+     }
+     .floor-map .floor-map__right   .iclean:hover,
+     .floor-map .floor-map__right   .beeline:hover,
+     .floor-map .floor-map__right   .atelie:hover,
+     .floor-map .floor-map__right   .terminal:hover, 
+     .floor-map .floor-map__right   .trolley:hover,   
+     .floor-map .floor-map__right   .fun_party:hover,
+     .floor-map .floor-map__right   .terminal:hover,
+     .floor-map .floor-map__right   .kazpost:hover{
+      fill: #0098DA;
+     }
+
+
+     .floor-map .floor-map__right   .outlet__city:hover,
+     .floor-map .floor-map__right   .respect:hover,
+     .floor-map .floor-map__right   .intertop:hover,
+     .floor-map .floor-map__right   .flo:hover,
+     .floor-map .floor-map__right   .cabani:hover {
+      fill: #52658C;
+     }
+     
+     .floor-map .floor-map__right   .toilet_south_w:hover,
+     .floor-map .floor-map__right  .toilet_m:hover,
+     .floor-map .floor-map__right  .wardrobe:hover,
+     .floor-map .floor-map__right  .toilet_north_f:hover,
+     .floor-map .floor-map__right  .toilet_north_m:hover,
+     .floor-map .floor-map__right  .toilet_south_f:hover,
+     .floor-map .floor-map__right  .toilet_south_m:hover,
+     .floor-map .floor-map__right  .lift:hover,
+     .floor-map .floor-map__right  .toilet_m,
+     .floor-map .floor-map__right   .zelenaya_apteka:hover{
+      fill: #71A72B;
+     }
+
+     .floor-map .floor-map__right  .detskii_mir:hover,
+     .floor-map .floor-map__right  .honey:hover{
+      fill: #A8CF45;
+     }
+
+     .floor-map .floor-map__right   .ikki:hover,
+     .floor-map .floor-map__right   .mavi_jeans:hover,
+     .floor-map .floor-map__right   .lichi:hover,
+     .floor-map .floor-map__right   .ds_damat:hover,
+     .floor-map .floor-map__right   .enrico_marinelli:hover,
+     .floor-map .floor-map__right   .giovane:hover,
+     .floor-map .floor-map__right   .glasman:hover,
+     .floor-map .floor-map__right   .colins:hover,
+     .floor-map .floor-map__right   .koton:hover,
+     .floor-map .floor-map__right   .ltb:hover {
+      fill: #51A8B1;
+     }
+
+     .floor-map .floor-map__right   .code_de_vie:hover,
+     .floor-map .floor-map__right   .missha:hover,
+     .floor-map .floor-map__right   .rocher:hover,
+     .floor-map .floor-map__right   .wycon:hover,
+     .floor-map .floor-map__right   .nature_republic:hover,
+     .floor-map .floor-map__right   .asian_cosmetics:hover,
+     .floor-map .floor-map__right   .neri_karra:hover,
+     .floor-map .floor-map__right   .inglot:hover,
+     .floor-map .floor-map__right   .eyfel:hover{
+
+      fill: #F7ADAF;
+     }
+
+     .floor-map .floor-map__right   .miniso:hover,
+     .floor-map .floor-map__right  .euromagia:hover,
+     .floor-map .floor-map__right  .vtrende_lux:hover,
+     .floor-map .floor-map__right  .diva:hover{
+      fill: #FFCC29;
+     }
+
+     .floor-map .floor-map__right   .glo_studio:hover,
+     .floor-map .floor-map__right   .sherlock:hover,
+     .floor-map .floor-map__right   .faber_castell:hover,
+     .floor-map .floor-map__right   .administration:hover{
+      fill: #A98F71;
+     }
+
+     .floor-map .floor-map__right   .anawa_kids:hover,
+     .floor-map .floor-map__right   .mama_pochitai:hover{
+      fill: #D2AE6D;
+     }
+     
+     .floor-map .floor-map__right   .diva,
+     .floor-map .floor-map__right   .ELP:hover,
+     .floor-map .floor-map__right   .mix_imperia:hover,
+     .floor-map .floor-map__right   .pandora:hover,
+     .floor-map .floor-map__right   .anelli:hover,
+     .floor-map .floor-map__right  .serebroff:hover, 
+     .floor-map .floor-map__right  .lalo:hover,
+     .floor-map .floor-map__right  .national-jewerly:hover,
+     .floor-map .floor-map__right   .parovozik:hover{
+      fill: #A8518A;
+     }
+
+     
+     .floor-map .floor-map__right   .kfc:hover,
+     .floor-map .floor-map__right   .coffee_like:hover,
+     .floor-map .floor-map__right   .chuchvara2:hover,
+     .floor-map .floor-map__right   .chuchvara:hover,
+     .floor-map .floor-map__right   .bambino:hover,
+     .floor-map .floor-map__right   .pizzaro:hover,
+     .floor-map .floor-map__right   .pappas_pizza:hover ,
+     .floor-map .floor-map__right   .redway:hover,
+     .floor-map .floor-map__right   .burger_time:hover,
+     .floor-map .floor-map__right   .best_shawarma:hover,
+     .floor-map .floor-map__right   .zhekas_ice:hover,
+     .floor-map .floor-map__right   .actual_optics:hover:hover,
+     .floor-map .floor-map__right   .travelers_coffee:hover{
+      fill: #ED2F59;
+     }
+    
+     .floor-map .floor-map__right   .trolley,
+
+     .floor-map .floor-map__right   .rk-tel:hover,
+     .floor-map .floor-map__right   .lego_qala:hover,
+     .floor-map .floor-map__right   .play_park:hover
+    {
+      fill: #A46080;
+     }
+    
+     .floor-map .floor-map__right   .baby_room:hover{
+      fill: #EC268F;
+     }
+    
+     
+     .floor-map .floor-map__right   .respect,
+     .floor-map .floor-map__right   .toilet_south_w,
+      .floor-map .floor-map__right   .iclean,
+      .floor-map .floor-map__right   .beeline,
+      .floor-map .floor-map__right   .atelie,
+      .floor-map .floor-map__right   .terminal,   
+      .floor-map .floor-map__right   .fun_party,
+      .floor-map .floor-map__right   .terminal,
+      .floor-map .floor-map__right   .kazpost,
+      .floor-map .floor-map__right   .outlet__city,
+      .floor-map .floor-map__right   .intertop,
+      .floor-map .floor-map__right   .flo,
+      .floor-map .floor-map__right   .cabani,
+      .floor-map .floor-map__right  .toilet_m,
+      .floor-map .floor-map__right  .wardrobe,
+      .floor-map .floor-map__right  .toilet_north_f,
+      .floor-map .floor-map__right  .toilet_north_m,
+      .floor-map .floor-map__right  .toilet_south_f,
+      .floor-map .floor-map__right  .toilet_south_m,
+      .floor-map .floor-map__right  .lift,
+      .floor-map .floor-map__right  .toilet_m,
+      .floor-map .floor-map__right   .zelenaya_apteka,
+      .floor-map .floor-map__right  .detskii_mir,
+      .floor-map .floor-map__right  .honey,
+      .floor-map .floor-map__right   .ikki,
+      .floor-map .floor-map__right   .mavi_jeans,
+      .floor-map .floor-map__right   .lichi,
+      .floor-map .floor-map__right   .ds_damat,
+      .floor-map .floor-map__right   .enrico_marinelli,
+      .floor-map .floor-map__right   .giovane,
+      .floor-map .floor-map__right   .glasman,
+      .floor-map .floor-map__right   .colins,
+      .floor-map .floor-map__right   .koton,
+      .floor-map .floor-map__right   .ltb,
+      .floor-map .floor-map__right   .code_de_vie,
+      .floor-map .floor-map__right   .missha,
+      .floor-map .floor-map__right   .rocher,
+      .floor-map .floor-map__right   .wycon,
+      .floor-map .floor-map__right   .nature_republic,
+      .floor-map .floor-map__right   .asian_cosmetics,
+      .floor-map .floor-map__right   .neri_karra,
+      .floor-map .floor-map__right   .inglot,
+      .floor-map .floor-map__right   .eyfel,
+      .floor-map .floor-map__right   .miniso,
+      .floor-map .floor-map__right  .euromagia,
+      .floor-map .floor-map__right  .vtrende_lux,
+      .floor-map .floor-map__right  .diva,
+      .floor-map .floor-map__right   .glo_studio,
+      .floor-map .floor-map__right   .sherlock,
+      .floor-map .floor-map__right   .faber_castell,
+      .floor-map .floor-map__right   .administration,
+      .floor-map .floor-map__right   .anawa_kids,
+      .floor-map .floor-map__right   .mama_pochitai,
+      .floor-map .floor-map__right   .diva,
+      .floor-map .floor-map__right   .ELP,
+      .floor-map .floor-map__right   .mix_imperia,
+      .floor-map .floor-map__right   .pandora,
+      .floor-map .floor-map__right   .anelli,
+      .floor-map .floor-map__right  .serebroff, 
+      .floor-map .floor-map__right  .lalo,
+      .floor-map .floor-map__right  .national-jewerly,
+      .floor-map .floor-map__right   .parovozik,
+      .floor-map .floor-map__right   .kfc,
+      .floor-map .floor-map__right   .coffee_like,
+      .floor-map .floor-map__right   .chuchvara2,
+      .floor-map .floor-map__right   .chuchvara,
+      .floor-map .floor-map__right   .bambino,
+      .floor-map .floor-map__right   .pizzaro,
+      .floor-map .floor-map__right   .pappas_pizza ,
+      .floor-map .floor-map__right   .redway,
+      .floor-map .floor-map__right   .burger_time,
+      .floor-map .floor-map__right   .best_shawarma,
+      .floor-map .floor-map__right   .zhekas_ice,
+      .floor-map .floor-map__right   .actual_optics,
+      .floor-map .floor-map__right   .travelers_coffee,
+      .floor-map .floor-map__right   .trolley,
+      .floor-map .floor-map__right   .rk-tel,
+      .floor-map .floor-map__right   .lego_qala,
+      .floor-map .floor-map__right   .play_park,
+      .floor-map .floor-map__right   .baby_room,
+      .floor-map .floor-map__right   .mobile_services
+      {
+       fill: #D2D3D5;
+      transition: all .3s;
+      };
+
+
+      .fil0{
+        fill: #efefef !important;
+      }
+
+     
+
+    /*map2 end*/
+
+     /*SVG styles end*/
+     
+     
+    
       .floor-map .floor-map__right .floor-map__zoom .floor-map__zoom__btn {
         display: -webkit-box;
         display: -webkit-flex;

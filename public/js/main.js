@@ -616,3 +616,53 @@ $(document).ready(function(){
   });
 
 });
+/*MAP*/
+/* Map floors */
+
+
+
+
+var floorsMap1 = document.querySelector(".floor-map-tabs__link a:nth-child(2)");
+
+floorsMap1.onclick = function()  {
+
+       
+  document.getElementsByClassName("map1")[0].classList.add("map-active");
+  document.getElementsByClassName("map2")[0].classList.remove("map-active");
+  document.getElementsByClassName("map3")[0].classList.remove("map-active");
+   
+  
+};
+
+var floorsMap2 = document.querySelector(".floor-map-tabs__link a:nth-child(3)");
+
+floorsMap2.onclick = function()  {
+
+       
+  document.getElementsByClassName("map1")[0].classList.remove("map-active");
+  document.getElementsByClassName("map2")[0].classList.add("map-active");
+  document.getElementsByClassName("map3")[0].classList.remove("map-active");
+   
+  
+};
+
+var floorsMap3 = document.querySelector(".floor-map-tabs__link a:nth-child(4)");
+
+floorsMap3.onclick = function()  {
+
+       
+  document.getElementsByClassName("map1")[0].classList.remove("map-active");
+  document.getElementsByClassName("map2")[0].classList.remove("map-active");
+  document.getElementsByClassName("map3")[0].classList.add("map-active");
+   
+  
+};
+
+/*Map floors end*/
+
+floorsMap3.onclick = function()  {
+document.getElementsByClassName("map1")[0].classList.remove("map-active");
+}
+/*Map list end*/
+
+/*MAP END */
