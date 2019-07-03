@@ -111,10 +111,10 @@
                                                     src="images/map-accordeon-arrow-down.png" alt="icon"></span>
                                         </a>
                                         <ul class="floor-map__submenu">
-                                            <li><a href="#">fun_party</a></li>
-                                            <li><a href="#">detskii_mir</a></li>
+                                            <li><a class="fun_party" href="#">fun_party</a></li>
+                                            <li><a class="detskii_mir" href="#">detskii_mir</a></li>
 
-                                            <li><a href="#">Подменю0</a></li>
+                                            <li><a class="" href="#">Подменю0</a></li>
                                         </ul>
                                     </li>
                                     <li>
@@ -125,20 +125,20 @@
                                         </a>
                                         <ul class="floor-map__submenu">
 
-                                            <li><a href="#">toilet_south_w</a></li>
+                                            <li><a class="toilet" href="#">toilet_south_w</a></li>
 
 
 
 
-                                            <li><a href="#">cabani</a></li>
+                                            <li><a class="cabani" href="#">cabani</a></li>
 
 
 
 
 
 
-                                            <li><a href="#">giovane</a></li>
-                                            <li><a href="#">glasman</a></li>
+                                            <li><a class="giovane" href="#">giovane</a></li>
+                                            <li><a class="glasman" href="#">glasman</a></li>
 
                                     </li>
 
@@ -146,14 +146,14 @@
 
 
 
-                                    <li><a href="#">atelie</a></li>
-                                    <li><a href="#">atelie</a></li>
-                                    <li><a href="#">atelie</a></li>
-                                    <li><a href="#">atelie</a></li>
-                                    <li><a href="#">atelie</a></li>
-                                    <li><a href="#">atelie</a></li>
-                                    <li><a href="#">atelie</a></li>
-                                    <li><a href="#">atelie</a></li>
+                                    <li><a class="" href="#">atelie</a></li>
+                                    <li><a class="" href="#">atelie</a></li>
+                                    <li><a class="" href="#">atelie</a></li>
+                                    <li><a class="" href="#">atelie</a></li>
+                                    <li><a class="" href="#">atelie</a></li>
+                                    <li><a class="" href="#">atelie</a></li>
+                                    <li><a class="" href="#">atelie</a></li>
+                                    
 
 
                                 </ul>
@@ -165,13 +165,13 @@
                                                 alt="icon"></span>
                                     </a>
                                     <ul class="floor-map__submenu">
-                                        <li><a href="#">coffee_like</a></li>
-                                        <li><a href="#">coffee_like</a></li>
-                                        <li><a href="#">chuchvara</a></li>
-                                        <li><a href="#">chuchvara2</a></li>
+                                        <li><a class="coffee_like" href="#">coffee_like</a></li>
+                                        <li><a class="coffee_like" href="#">coffee_like</a></li>
+                                        <li><a class="chuchvara" href="#">chuchvara</a></li>
+                                        <li><a class="chuchvara2" href="#">chuchvara2</a></li>
 
-                                        <li><a href="#">travelers_coffee</a></li>
-                                        <li><a href="#">chuchvara2</a></li>
+                                        <li><a class="travelers_coffee" href="#">travelers_coffee</a></li>
+                                        <li><a class="chuchvara2" href="#">chuchvara2</a></li>
                                     </ul>
                                 </li>
                                 <li>
@@ -181,15 +181,15 @@
                                                 alt="icon"></span>
                                     </a>
                                     <ul class="floor-map__submenu">
-                                        <li><a href="#">lift</a></li>
-                                        <li><a href="#">wardrobe</a></li>
+                                        <li><a class="lift" href="#">lift</a></li>
+                                        <li><a class="wardrobe" href="#">wardrobe</a></li>
                                         
-                                        <li><a href="#">baby_room</a></li>
+                                        <li><a class="baby_room" href="#">baby_room</a></li>
                                         
-                                        <li><a href="#">iclean</a></li>
-                                        <li><a href="#">iclean</a></li>
-                                        <li><a href="#">iclean</a></li>
-                                        <li><a href="#">iclean</a></li>
+                                        <li><a class="" href="#">iclean</a></li>
+                                        <li><a class="" href="#">iclean</a></li>
+                                        <li><a class="" href="#">iclean</a></li>
+                                        <li><a class="" href="#">iclean</a></li>
                                     </ul>
                                 </li>
                                 <li>
@@ -199,10 +199,7 @@
                                                 alt="icon"></span>
                                     </a>
                                     <ul class="floor-map__submenu">
-                                        <li><a href="#">Подменю0</a></li>
-                                        <li><a href="#">Подменю0</a></li>
-                                        <li><a href="#">Подменю0</a></li>
-                                        <li><a href="#">Подменю0</a></li>
+                                            <li><a class="atelie" href="#">atelie</a></li>
                                     </ul>
                                 </li>
                                 </ul>
@@ -219,10 +216,10 @@
                                                     src="images/map-accordeon-arrow-down.png" alt="icon"></span>
                                         </a>
                                         <ul class="floor-map__submenu">
-                                            <li><a href="#">Подменю</a></li>
-                                            <li><a href="#">Подменю</a></li>
-                                            <li><a href="#">Подменю</a></li>
-                                            <li><a href="#">Подменю</a></li>
+                                            <li><a class="" href="#">Подменю</a></li>
+                                            <li><a class="" href="#">Подменю</a></li>
+                                            <li><a class="" href="#">Подменю</a></li>
+                                            <li><a class="" href="#">Подменю</a></li>
                                         </ul>
                                     </li>
                                     <li>
@@ -233,48 +230,48 @@
                                         </a>
                                         <ul class="floor-map__submenu">
                                             <li><a class="respect" href="#">respect</a></li>
-                                            <li><a href="#">iclean</a></li>
-                                            <li><a href="#">outlet__city</a></li>
-                                            <li><a href="#">intertop</a></li>
-                                            <li><a href="#">honey</a></li>
-                                            <li><a href="#">ikki</a></li>
-                                            <li><a href="#">mavi_jeans</a></li>
-                                            <li><a href="#">lichi</a></li>
-                                            <li><a href="#">ds_damat</a></li>
-                                            <li><a href="#">enrico_marinelli,</a></li>
-                                            <li><a href="#">ltb</a></li>
-                                            <li><a href="#">code_de_vie</a></li>
-                                            <li><a href="#">missha</a></li>
-                                            <li><a href="#">rocher</a></li>
-                                            <li><a href="#">wycon</a></li>
-                                            <li><a href="#">nature_republic</a></li>
-                                            <li><a href="#">asian_cosmetics</a></li>
-                                            <li><a href="#">neri_karra</a></li>
-                                            <li><a href="#">inglot</a></li>
-                                            <li><a href="#">eyfel</a></li>
-                                            <li><a href="#">miniso</a></li>
-                                            <li><a href="#">euromagia</a></li>
-                                            <li><a href="#">vtrende_lux</a></li>
-                                            <li><a href="#">diva</a></li>
-                                            <li><a href="#">glo_studio</a></li>
-                                            <li><a href="#">sherlock</a></li>
-                                            <li><a href="#">faber_castell</a></li>
+                                            <li><a class="iclean" href="#">iclean</a></li>
+                                            <li><a class="outlet__city" href="#">outlet__city</a></li>
+                                            <li><a class="intertop" href="#">intertop</a></li>
+                                            <li><a class="honey" href="#">honey</a></li>
+                                            <li><a class="ikki" href="#">ikki</a></li>
+                                            <li><a class="mavi_jeans" href="#">mavi_jeans</a></li>
+                                            <li><a class="lichi" href="#">lichi</a></li>
+                                            <li><a class="ds_damat" href="#">ds_damat</a></li>
+                                            <li><a class="enrico_marinelli" href="#">enrico_marinelli,</a></li>
+                                            <li><a class="ltb" href="#">ltb</a></li>
+                                            <li><a class="code_de_vie" href="#">code_de_vie</a></li>
+                                            <li><a class="missha" href="#">missha</a></li>
+                                            <li><a class="rocher" href="#">rocher</a></li>
+                                            <li><a class="wycon" href="#">wycon</a></li>
+                                            <li><a class="nature_republic" href="#">nature_republic</a></li>
+                                            <li><a class="asian_cosmetics" href="#">asian_cosmetics</a></li>
+                                            <li><a class="neri_karra" href="#">neri_karra</a></li>
+                                            <li><a class="inglot" href="#">inglot</a></li>
+                                            <li><a class="eyfel" href="#">eyfel</a></li>
+                                            <li><a class="miniso" href="#">miniso</a></li>
+                                            <li><a class="euromagia" href="#">euromagia</a></li>
+                                            <li><a class="vtrende_lux" href="#">vtrende_lux</a></li>
+                                            <li><a class="diva" href="#">diva</a></li>
+                                            <li><a class="glo_studio" href="#">glo_studio</a></li>
+                                            <li><a class="sherlock" href="#">sherlock</a></li>
+                                            <li><a class="faber_castell" href="#">faber_castell</a></li>
                                          
-                                            <li><a href="#">mama_pochitai</a></li>
-                                            <li><a href="#">ELP</a></li>
-                                            <li><a href="#">mix_imperia</a></li>
-                                            <li><a href="#">pandora</a></li>
-                                            <li><a href="#">anelli</a></li>
-                                            <li><a href="#">serebroff</a></li>
-                                            <li><a href="#">lalo</a></li>
-                                            <li><a href="#">national-jewerly</a></li>
-                                            <li><a href="#">parovozik</a></li>
-                                            <li><a href="#">kfc</a></li>
-                                            <li><a href="#">bambino</a></li>
-                                            <li><a href="#">actual_optics</a>
+                                            <li><a class="mama_pochitai" href="#">mama_pochitai</a></li>
+                                            <li><a class="ELP" href="#">ELP</a></li>
+                                            <li><a class="mix_imperia" href="#">mix_imperia</a></li>
+                                            <li><a class="pandora" href="#">pandora</a></li>
+                                            <li><a class="anelli" href="#">anelli</a></li>
+                                            <li><a class="serebroff" href="#">serebroff</a></li>
+                                            <li><a class="lalo" href="#">lalo</a></li>
+                                            <li><a class="national-jewerly" href="#">national-jewerly</a></li>
+                                            <li><a class="parovozik" href="#">parovozik</a></li>
+                                            <li><a class="kfc" href="#">kfc</a></li>
+                                            <li><a class="bambino" href="#">bambino</a></li>
+                                            <li><a class="actual_optics" href="#">actual_optics</a>
                                             </li>
-                                            <li><a href="#">trolley</a></li>
-                                            <li><a href="#">rk-tel</a></li>
+                                            <li><a class="trolley" href="#">trolley</a></li>
+                                            <li><a class="rk-tel" href="#">rk-tel</a></li>
                                         </ul>
                                     </li>
                                     <li>
@@ -294,11 +291,14 @@
                                                     src="images/map-accordeon-arrow-down.png" alt="icon"></span>
                                         </a>
                                         <ul class="floor-map__submenu">
-                                                <li><a href="#">mobile_services</a></li>
-                                                <li><a href="#">kazpost</a></li>
-                                                <li><a href="#">terminal</a></li>
-                                                <li><a href="#">zelenaya_apteka</a></li>
-                                                <li><a href="#">administration</a></li>
+                                                <li><a class="mobile_services" href="#">mobile_services</a></li>
+                                                <li><a class="kazpost" href="#">kazpost</a></li>
+                                                <li><a class="terminal" href="#">terminal</a></li>
+                                                <li><a class="zelenaya_apteka" href="#">zelenaya_apteka</a></li>
+                                                <li><a class="administration" href="#">administration</a></li>
+                                                <li><a class="beeline" href="#">beeline</a></li>
+                                                <li><a class="toilet" href="#">toilet</a></li>
+                                                
                                         </ul>
                                     </li>
                                     <li>
@@ -325,7 +325,7 @@
                                                     src="images/map-accordeon-arrow-down.png" alt="icon"></span>
                                         </a>
                                         <ul class="floor-map__submenu">
-                                            <li><a href="#">play_park</a></li>
+                                            <li><a class="play_park" href="#">play_park</a></li>
 
                                         </ul>
                                     </li>
@@ -336,10 +336,11 @@
                                                     src="images/map-accordeon-arrow-down.png" alt="icon"></span>
                                         </a>
                                         <ul class="floor-map__submenu">
-                                            <li><a href="#">flo</a></li>
-                                            <li><a href="#">colins</a></li>
-                                            <li><a href="#">koton</a>
-                                            <li><a href="#">lego_qala</a></li>
+                                            <li><a class="flo" href="#">flo</a></li>
+                                            <li><a class="colins" href="#">colins</a></li>
+                                            <li><a class="koton" href="#">koton</a>
+                                            <li><a class="lego_qala" href="#">lego_qala</a></li>
+                                            <li><a class="anawa_kids" href="#">anawa_kids</a></li>
                                             
                                         </ul>
                                     </li>
@@ -398,7 +399,8 @@
                                                     src="images/map-accordeon-arrow-down.png" alt="icon"></span>
                                         </a>
                                         <ul class="floor-map__submenu">
-
+                                                
+                                                
                                         </ul>
                                     </li>
                                     <li>
@@ -408,12 +410,12 @@
                                                     src="images/map-accordeon-arrow-down.png" alt="icon"></span>
                                         </a>
                                         <ul class="floor-map__submenu">
-                                            <li><a href="#">pizzaro</a></li>
-                                            <li><a href="#">pappas_pizza</a></li>
-                                            <li><a href="#">redway</a></li>
-                                            <li><a href="#">burger_time</a></li>
-                                            <li><a href="#">best_shawarma</a></li>
-                                            <li><a href="#">zhekas_ice</a></li>
+                                            <li><a class="pizzaro" href="#">pizzaro</a></li>
+                                            <li><a class="pappas_pizza" href="#">pappas_pizza</a></li>
+                                            <li><a class="redway" href="#">redway</a></li>
+                                            <li><a class="burger_time" href="#">burger_time</a></li>
+                                            <li><a class="best_shawarma" href="#">best_shawarma</a></li>
+                                            <li><a class="zhekas_ice" href="#">zhekas_ice</a></li>
                                         </ul>
                                     </li>
                                     <li>
@@ -969,9 +971,9 @@
                                     d="M1200.81 2758.96l134.68 0 0 -70.62 0 -9.08c0,-20.79 -17.01,-37.8 -37.8,-37.8l-96.88 0 0 46.88 0 70.62z" />
                                 <polygon class="fil2 str22"
                                     points="1487.36,2925.18 1535.18,2925.18 1535.18,2903.31 1638.3,2903.31 1638.3,3013.31 1535.18,3013.31 1487.36,3013.31 1487.36,3021.08 1425.79,3021.08 1425.79,2925.18 1425.79,2849.56 1425.79,2799.56 1487.36,2799.56 1528.3,2799.56 1528.3,2849.56 1487.36,2849.56 " />
-                                <polygon class="toilet_south_w fil14 str22"
+                                <polygon class="toilet fil14 str22"
                                     points="1335.49,2758.96 1268.15,2758.96 1268.15,2826.31 1335.49,2826.31 " />
-                                <polygon class="toilet_south_m fil14 str22"
+                                <polygon class="toilet fil14 str22"
                                     points="1200.81,2758.96 1268.15,2758.96 1268.15,2826.31 1200.81,2826.31 " />
                                 <polygon class="fil2 str22"
                                     points="1272.19,877.67 1161.03,877.67 1161.03,953.53 1272.19,953.53 " />
@@ -1117,7 +1119,7 @@
                                     points="734.9,3021.08 949.42,3021.08 949.42,3086.47 734.9,3086.47 " />
                                 <path class="fil2 str22"
                                     d="M2125.79 1084.57l0 117.49 166.93 0c0,-83.38 0,-67.46 0,-117.49l-166.93 0z" />
-                                <polygon class="toilet_north_m fil14 str22"
+                                <polygon class="toilet fil14 str22"
                                     points="1228.37,945.02 1161.03,945.02 1161.03,877.67 1228.37,877.67 " />
                                 <path class="fil23"
                                     d="M555.08 2827.65l0 -53.7 10.87 0 0 23.79 21.91 -23.79 14.58 0 -20.27 20.92 21.32 32.78 -14.03 0 -14.77 -25.21 -8.74 8.98 0 16.23 -10.87 0zm54.01 0l0 -53.7 36.9 0 0 9.08 -26.03 0 0 12.75 22.5 0 0 9.07 -22.5 0 0 22.8 -10.87 0zm80.16 -19.8l10.5 3.23c-1.61,5.91 -4.3,10.3 -8.05,13.17 -3.75,2.87 -8.5,4.3 -14.26,4.3 -7.14,0 -13,-2.43 -17.6,-7.31 -4.59,-4.87 -6.89,-11.54 -6.89,-20 0,-8.94 2.31,-15.89 6.93,-20.84 4.61,-4.95 10.68,-7.42 18.21,-7.42 6.57,0 11.91,1.95 16.01,5.84 2.45,2.3 4.28,5.6 5.5,9.91l-10.72 2.55c-0.64,-2.78 -1.97,-4.98 -3.98,-6.59 -2.02,-1.61 -4.47,-2.41 -7.35,-2.41 -3.99,0 -7.22,1.42 -9.7,4.29 -2.49,2.85 -3.72,7.47 -3.72,13.87 0,6.78 1.22,11.61 3.66,14.49 2.45,2.89 5.62,4.32 9.54,4.32 2.88,0 5.37,-0.91 7.45,-2.74 2.07,-1.84 3.57,-4.72 4.47,-8.66z" />
@@ -1260,7 +1262,7 @@
                                         d="M1189.06 897.57l11.27 0c2.05,0 3.73,1.67 3.73,3.72l0 1.92 0 6.66 0 4.84c0,0.92 -0.75,1.66 -1.66,1.66l0 0c-0.92,0 -1.67,-0.74 -1.67,-1.66l0 -1.14 -0.02 0 0 -9.82c0,-0.33 -0.27,-0.6 -0.61,-0.6l0 0c-0.33,0 -0.6,0.27 -0.6,0.6l0 7.32 0 2.52 0 0.12 0 4.72 0 14.38c0,1.18 -0.97,2.16 -2.16,2.16l0 0c-1.19,0 -2.16,-0.98 -2.16,-2.16l0 -9.6 0 -7.44c0,-0.34 -0.27,-0.61 -0.6,-0.61l0 0c-0.34,0 -0.61,0.27 -0.61,0.61l0 7.41 0 9.75c0,1.12 -0.92,2.04 -2.04,2.04l0 0c-1.12,0 -2.03,-0.92 -2.03,-2.04l0 -14.5 0 -4.72 0 -0.12 0 -2.64 0 -7.2c0,-0.33 -0.28,-0.6 -0.61,-0.6l0 0c-0.33,0 -0.6,0.27 -0.6,0.6l0 9.82 -0.03 0 0 1.14c0,0.92 -0.75,1.66 -1.66,1.66l0 0c-0.92,0 -1.66,-0.74 -1.66,-1.66l0 -4.84 0 -6.66 0 -1.92c0,-2.05 1.67,-3.72 3.72,-3.72z" />
                                 </g>
                                 <g id="_2096388114608">
-                                    <polygon class="toilet_north_f fil14 str22"
+                                    <polygon class="toilet fil14 str22"
                                         points="1228.37,810.33 1161.03,810.33 1161.03,877.67 1228.37,877.67 " />
                                     <g>
                                         <path class="fil0"
@@ -1833,9 +1835,9 @@
                                     points="1073.4,1185.76 1239.02,1185.76 1239.02,1073.49 1131.68,1073.49 1131.68,1080.58 1073.4,1080.58 " />
                                 <polygon class="fil1 str0"
                                     points="958.43,1204.08 1073.4,1204.08 1073.4,1080.58 1020.51,1080.58 1020.01,1074.96 958.43,1074.96 " />
-                                <polygon class="toilet_m fil9 str0"
+                                <polygon class="toilet fil9 str0"
                                     points="1194.98,2681.17 1127.64,2681.17 1127.64,2748.52 1194.98,2748.52 " />
-                                <polygon class="toilet_m fil9 str0"
+                                <polygon class="toilet fil9 str0"
                                     points="1060.3,2681.17 1127.64,2681.17 1127.64,2748.52 1060.3,2748.52 " />
                                 <polygon class="wardrobe fil9 str0"
                                     points="1025.77,1136.74 958.43,1136.74 958.43,1204.08 1025.77,1204.08 " />
@@ -1872,7 +1874,7 @@
                                     d="M379.41 191.09l477.27 0 163.73 0 118.36 0 0 67.97 0 41.21 -2.5 0 0 217 -48.19 0 -16.81 0 0 119 65.02 0.08 -0.02 86.24 -4.98 0 0.39 50.02 0 6.67 0 14.74 0 22.04 0 33.54 0 87.63 0 1.86 -111.67 0 0 135.87 -215.04 0 -98.76 1.1 -326.8 0 0 -136.72 0 -108.12 59.93 0c0,-25.28 0,-50.56 0,-75.84l0 -31.04 -59.93 0 0 -100.01 0 -43.32 0 -389.92zm326.59 538.69l101.04 0 0 209.37 -101.04 0 0 -209.37z" />
                                 <polygon class="fil1 str0"
                                     points="1020.01,939.09 1131.68,939.09 1131.68,1080.58 1020.01,1080.58 " />
-                                <polygon class="toilet_north_m fil9 str0"
+                                <polygon class="toilet fil9 str0"
                                     points="1131.29,789.93 1063.95,789.93 1063.95,857.28 1131.29,857.28 " />
                                 <polygon class="baby_room fil12 str0"
                                     points="1131.29,789.93 1063.95,789.93 1063.95,722.59 1131.29,722.59 " />
